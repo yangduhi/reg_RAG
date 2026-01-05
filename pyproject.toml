@@ -1,0 +1,56 @@
+[project]
+name = "fmvss-rag-advanced"
+version = "1.0.0"
+description = "High-performance Async Legal RAG System for Automotive Safety Standards"
+# 사용자의 환경(3.11)에 맞춰 최적화
+requires-python = ">=3.11"
+authors = [{name = "User", email = "user@example.com"}]
+dependencies = [
+    "langchain",
+    "langchain-community",
+    "langchain-google-genai",
+    "chromadb",
+    "loguru",
+    "tenacity",
+    "pydantic-settings",
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
+
+[tool.ruff]
+# 줄 길이 88 (Black 및 최신 트렌드 준수)
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+# E: 에러, F: Pyflakes, I: Isort, B: Bugbear, W: 경고, UP: 최신 문법 업그레이드
+select = ["E", "F", "I", "B", "W", "UP"]
+ignore = []
+
+# 저장 시 자동 수정 활성화
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+# docstring 포맷팅 활성화
+docstring-code-format = true
+
+[tool.isort]
+profile = "black"
+# 한 줄에 여러 라이브러리 import 시 결합 (가독성 증대)
+combine-as-imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+# -ra: 모든 결과 요약, -q: 간결하게, asyncio-mode=auto: 비동기 테스트 자동 인식
+addopts = "-ra -q --asyncio-mode=auto"
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.ruff.lint.isort]
+# 특정 라이브러리 그룹화 순서 (선택 사항)
+known-first-party = ["src"]

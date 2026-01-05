@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.streamlit/secrets.toml
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+system.log
+
+# Data (Large files, DBs, Generated Content)
+data/vector_db/
+data/ingestion_state.sqlite
+data/raw/
+data/processed_json_for_rag/
+selenium_user_data/
+
+# Archives & Backups
+_archive/
+
+# Crawlers (Data already collected)
+scripts/ece_crawler.py
+scripts/korean_law_crawler_v2.py
+scripts/core_utils.py
+
+# OS generated files
+.DS_Store
+Thumbs.db

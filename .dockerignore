@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS / Temp
+.DS_Store
+Thumbs.db
+
+# Logs & Data (will be managed via GCS)
+logs/
+data/
+_archive/
+selenium_user_data/
+*.log
+
+# Tests & Caches
+.pytest_cache/
+.streamlit/

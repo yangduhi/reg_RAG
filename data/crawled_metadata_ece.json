@@ -1,0 +1,226 @@
+[
+    {
+        "id": "ECE-R11",
+        "num": 11,
+        "title": "UN_Regulation_No._11_-_Rev.3_-_Door_latches_and_hinges_Rev0_English",
+        "pdf_file": "ECE_R11_UN_Regulation_No._11_-_Rev.3_-_Door_latches_and_hinges_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R011r3e.pdf",
+        "crawled_at": "2025-12-26 10:19:13"
+    },
+    {
+        "id": "ECE-R12",
+        "num": 12,
+        "title": "UN_Regulation_No._12_-_Rev.4_-_Steering_mechanism_Rev0_English",
+        "pdf_file": "ECE_R12_UN_Regulation_No._12_-_Rev.4_-_Steering_mechanism_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/R012r4e.pdf",
+        "crawled_at": "2025-12-26 10:19:16"
+    },
+    {
+        "id": "ECE-R13",
+        "num": 13,
+        "title": "UN_Regulation_No._13_-_Rev.6_-_Heavy_vehicle_braking_Rev0_English",
+        "pdf_file": "ECE_R13_UN_Regulation_No._13_-_Rev.6_-_Heavy_vehicle_braking_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/r013r6e.pdf",
+        "crawled_at": "2025-12-26 10:19:17"
+    },
+    {
+        "id": "ECE-R14",
+        "num": 14,
+        "title": "UN_Regulation_No._14_-_Rev.6_-_Amend.1_Rev0_English",
+        "pdf_file": "ECE_R14_UN_Regulation_No._14_-_Rev.6_-_Amend.1_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R014r6am1e.pdf",
+        "crawled_at": "2025-12-26 10:19:20"
+    },
+    {
+        "id": "ECE-R17",
+        "num": 17,
+        "title": "UN_Regulation_No._17_-_Rev.5_Rev0_English",
+        "pdf_file": "ECE_R17_UN_Regulation_No._17_-_Rev.5_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R017r5e.pdf",
+        "crawled_at": "2025-12-26 10:19:22"
+    },
+    {
+        "id": "ECE-R21",
+        "num": 21,
+        "title": "UN_Regulation_No._21_-_Rev.2_-_Interior_fittings_Rev0_English",
+        "pdf_file": "ECE_R21_UN_Regulation_No._21_-_Rev.2_-_Interior_fittings_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/r021r2e_1.pdf",
+        "crawled_at": "2025-12-26 10:19:49"
+    },
+    {
+        "id": "ECE-R25",
+        "num": 25,
+        "title": "UN_Regulation_No._25_-_Rev.1_-_Head_restraints_(headrests)_Rev0_English",
+        "pdf_file": "ECE_R25_UN_Regulation_No._25_-_Rev.1_-_Head_restraints_(headrests)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/r025r1e.pdf",
+        "crawled_at": "2025-12-26 10:19:51"
+    },
+    {
+        "id": "ECE-R29",
+        "num": 29,
+        "title": "UN_Regulation_No._29_-_Rev.2_-_Cabs_of_commercial_vehicles_Rev0_English",
+        "pdf_file": "ECE_R29_UN_Regulation_No._29_-_Rev.2_-_Cabs_of_commercial_vehicles_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/R029r2e.pdf",
+        "crawled_at": "2025-12-26 10:19:53"
+    },
+    {
+        "id": "ECE-R32",
+        "num": 32,
+        "title": "UN_Regulation_No._32_-_Rev.1_-_Rear-end_collision_Rev0_English",
+        "pdf_file": "ECE_R32_UN_Regulation_No._32_-_Rev.1_-_Rear-end_collision_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/r032r1e_1.pdf",
+        "crawled_at": "2025-12-26 10:19:56"
+    },
+    {
+        "id": "ECE-R33",
+        "num": 33,
+        "title": "UN_Regulation_No._33_-_Rev.1_-_Head-on_collision_Rev0_English",
+        "pdf_file": "ECE_R33_UN_Regulation_No._33_-_Rev.1_-_Head-on_collision_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/r033r1e_1.pdf",
+        "crawled_at": "2025-12-26 10:19:58"
+    },
+    {
+        "id": "ECE-R34",
+        "num": 34,
+        "title": "UN_Regulation_No._34_-_Rev.3_-_Prevention_of_fire_risks_Rev0_English",
+        "pdf_file": "ECE_R34_UN_Regulation_No._34_-_Rev.3_-_Prevention_of_fire_risks_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R034r3e.pdf",
+        "crawled_at": "2025-12-26 10:20:00"
+    },
+    {
+        "id": "ECE-R42",
+        "num": 42,
+        "title": "UN_Regulation_No._42_-_Front_and_rear_protection_devices_Rev0_English",
+        "pdf_file": "ECE_R42_UN_Regulation_No._42_-_Front_and_rear_protection_devices_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2009/r042e.pdf",
+        "crawled_at": "2025-12-26 10:20:28"
+    },
+    {
+        "id": "ECE-R44",
+        "num": 44,
+        "title": "UN_Regulation_No._44_-_Rev.3_-_Child_Restraint_Systems_Rev0_English",
+        "pdf_file": "ECE_R44_UN_Regulation_No._44_-_Rev.3_-_Child_Restraint_Systems_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/r44r3e.pdf",
+        "crawled_at": "2025-12-26 10:20:30"
+    },
+    {
+        "id": "ECE-R94",
+        "num": 94,
+        "title": "UN_Regulation_No._94_-_Rev.3_-_Frontal_collision_protection_-_03_series_Rev0_English",
+        "pdf_file": "ECE_R94_UN_Regulation_No._94_-_Rev.3_-_Frontal_collision_protection_-_03_series_Rev0_English.pdf",
+        "source_url": "http://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2017/R094r3e.pdf",
+        "crawled_at": "2025-12-26 10:21:09"
+    },
+    {
+        "id": "ECE-R95",
+        "num": 95,
+        "title": "UN_Regulation_No._95_-_Rev.2_-_Lateral_collision_protection_Rev0_English",
+        "pdf_file": "ECE_R95_UN_Regulation_No._95_-_Rev.2_-_Lateral_collision_protection_Rev0_English.pdf",
+        "source_url": "http://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R095r2e.pdf",
+        "crawled_at": "2025-12-26 10:21:19"
+    },
+    {
+        "id": "ECE-R100",
+        "num": 100,
+        "title": "UN_Regulation_No._100_-_Rev.2_-_Electric_power_trained_vehicles_Rev0_English",
+        "pdf_file": "ECE_R100_UN_Regulation_No._100_-_Rev.2_-_Electric_power_trained_vehicles_Rev0_English.pdf",
+        "source_url": "http://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2013/R100r2e.pdf",
+        "crawled_at": "2025-12-26 10:21:24"
+    },
+    {
+        "id": "ECE-R127",
+        "num": 127,
+        "title": "UN_Regulation_No._127_-_Rev.2_-_Pedestrian_Safety_Rev0_English",
+        "pdf_file": "ECE_R127_UN_Regulation_No._127_-_Rev.2_-_Pedestrian_Safety_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R127r2e.pdf",
+        "crawled_at": "2025-12-26 10:21:58"
+    },
+    {
+        "id": "ECE-R129",
+        "num": 129,
+        "title": "UN_Regulation_No._129_-_Enhanced_Child_Restraint_Systems_(ECRS)_Rev0_English",
+        "pdf_file": "ECE_R129_UN_Regulation_No._129_-_Enhanced_Child_Restraint_Systems_(ECRS)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2013/R129e.pdf",
+        "crawled_at": "2025-12-26 10:22:00"
+    },
+    {
+        "id": "ECE-R131",
+        "num": 131,
+        "title": "UN_Regulation_No._131_-_Rev.1_-_Advanced_Emergency_Braking_Systems_(AEBS)_Rev0_English",
+        "pdf_file": "ECE_R131_UN_Regulation_No._131_-_Rev.1_-_Advanced_Emergency_Braking_Systems_(AEBS)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R131r1e.pdf",
+        "crawled_at": "2025-12-26 10:22:02"
+    },
+    {
+        "id": "ECE-R134",
+        "num": 134,
+        "title": "UN_Regulation_No._134_-_Hydrogen_and_fuel_cell_vehicles_(HFCV)_Rev0_English",
+        "pdf_file": "ECE_R134_UN_Regulation_No._134_-_Hydrogen_and_fuel_cell_vehicles_(HFCV)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2015/R134e.pdf",
+        "crawled_at": "2025-12-26 10:22:05"
+    },
+    {
+        "id": "ECE-R135",
+        "num": 135,
+        "title": "UN_Regulation_No._135_-_Rev.1_-_Pole_Side_Impact_(PSI)_-_01_series_of_amendments_Rev0_English",
+        "pdf_file": "ECE_R135_UN_Regulation_No._135_-_Rev.1_-_Pole_Side_Impact_(PSI)_-_01_series_of_amendments_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2016/R135r1e.pdf",
+        "crawled_at": "2025-12-26 10:22:07"
+    },
+    {
+        "id": "ECE-R137",
+        "num": 137,
+        "title": "UN_Regulation_No._137_-_Rev.1_-_Frontal_impact_with_focus_on_restraint_systems_Rev0_English",
+        "pdf_file": "ECE_R137_UN_Regulation_No._137_-_Rev.1_-_Frontal_impact_with_focus_on_restraint_systems_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2017/R137r1e.pdf",
+        "crawled_at": "2025-12-26 10:22:09"
+    },
+    {
+        "id": "ECE-R138",
+        "num": 138,
+        "title": "UN_Regulation_No._138_-_Rev.1_-_Quiet_Road_Transport_Vehicles_(QRTV)_Rev0_English",
+        "pdf_file": "ECE_R138_UN_Regulation_No._138_-_Rev.1_-_Quiet_Road_Transport_Vehicles_(QRTV)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2017/R138r1e.pdf",
+        "crawled_at": "2025-12-26 10:22:11"
+    },
+    {
+        "id": "ECE-R144",
+        "num": 144,
+        "title": "UN_Regulation_No._144_-_Accident_Emergency_Call_Systems_(AECS)_Rev0_English",
+        "pdf_file": "ECE_R144_UN_Regulation_No._144_-_Accident_Emergency_Call_Systems_(AECS)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R144e.pdf",
+        "crawled_at": "2025-12-26 10:22:39"
+    },
+    {
+        "id": "ECE-R145",
+        "num": 145,
+        "title": "UN_Regulation_No._145_-_ISOFIX_anchorage_systems,_ISOFIX_top_tether_anchorages_and_i-Size_seating_po_Rev0_English",
+        "pdf_file": "ECE_R145_UN_Regulation_No._145_-_ISOFIX_anchorage_systems,_ISOFIX_top_tether_anchorages_and_i-Size_seating_po_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R145e.pdf",
+        "crawled_at": "2025-12-26 10:22:41"
+    },
+    {
+        "id": "ECE-R152",
+        "num": 152,
+        "title": "UN_Regulation_No._152_-_Advanced_Emergency_Braking_System_(AEBS)_Rev0_English",
+        "pdf_file": "ECE_R152_UN_Regulation_No._152_-_Advanced_Emergency_Braking_System_(AEBS)_Rev0_English.pdf",
+        "source_url": "https://www.unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2020/R152e.pdf",
+        "crawled_at": "2025-12-26 10:22:43"
+    },
+    {
+        "id": "ECE-R159",
+        "num": 159,
+        "title": "E_ECE_TRANS_505_Rev.3_Add.158_-_UN_Regulation_No._159_-_Moving_Off_Information_System_(MOIS)_06_07_2_Rev3_Amend1_English",
+        "pdf_file": "ECE_R159_E_ECE_TRANS_505_Rev.3_Add.158_-_UN_Regulation_No._159_-_Moving_Off_Information_System_(MOIS)_06_07_2_Rev3_Amend1_English.pdf",
+        "source_url": "https://unece.org/sites/default/files/2022-09/R159am1e.pdf",
+        "crawled_at": "2025-12-26 10:22:44"
+    },
+    {
+        "id": "ECE-R160",
+        "num": 160,
+        "title": "E_ECE_TRANS_505_Rev.3_Add.159_Amend.2_-_UN_Regulation_No._160_Amend.2_17_03_2023_docx_pdf_pdf_docx_p_Rev3_Amend3_English",
+        "pdf_file": "ECE_R160_E_ECE_TRANS_505_Rev.3_Add.159_Amend.2_-_UN_Regulation_No._160_Amend.2_17_03_2023_docx_pdf_pdf_docx_p_Rev3_Amend3_English.pdf",
+        "source_url": "https://unece.org/sites/default/files/2025-01/R160am3e.pdf",
+        "crawled_at": "2025-12-26 10:22:46"
+    }
+]

@@ -1,0 +1,618 @@
+[
+    {
+        "id": "571.101",
+        "num": 101,
+        "title": "No Title",
+        "xml_file": "571.101.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.101",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.102",
+        "num": 102,
+        "title": "No Title",
+        "xml_file": "571.102.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.102",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.103",
+        "num": 103,
+        "title": "No Title",
+        "xml_file": "571.103.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.103",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.104",
+        "num": 104,
+        "title": "No Title",
+        "xml_file": "571.104.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.104",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.105",
+        "num": 105,
+        "title": "No Title",
+        "xml_file": "571.105.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.105",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.106",
+        "num": 106,
+        "title": "No Title",
+        "xml_file": "571.106.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.106",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.107",
+        "num": 107,
+        "title": "No Title",
+        "xml_file": "571.107.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.107",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.108",
+        "num": 108,
+        "title": "No Title",
+        "xml_file": "571.108.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.108",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.109",
+        "num": 109,
+        "title": "No Title",
+        "xml_file": "571.109.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.109",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.110",
+        "num": 110,
+        "title": "No Title",
+        "xml_file": "571.110.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.110",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.111",
+        "num": 111,
+        "title": "No Title",
+        "xml_file": "571.111.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.111",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.112",
+        "num": 112,
+        "title": "No Title",
+        "xml_file": "571.112.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.112",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.113",
+        "num": 113,
+        "title": "No Title",
+        "xml_file": "571.113.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.113",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.114",
+        "num": 114,
+        "title": "No Title",
+        "xml_file": "571.114.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.114",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.115",
+        "num": 115,
+        "title": "No Title",
+        "xml_file": "571.115.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.115",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.116",
+        "num": 116,
+        "title": "No Title",
+        "xml_file": "571.116.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.116",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.117",
+        "num": 117,
+        "title": "No Title",
+        "xml_file": "571.117.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.117",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.118",
+        "num": 118,
+        "title": "No Title",
+        "xml_file": "571.118.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.118",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.119",
+        "num": 119,
+        "title": "No Title",
+        "xml_file": "571.119.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.119",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.120",
+        "num": 120,
+        "title": "No Title",
+        "xml_file": "571.120.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.120",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.121",
+        "num": 121,
+        "title": "No Title",
+        "xml_file": "571.121.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.121",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.122",
+        "num": 122,
+        "title": "No Title",
+        "xml_file": "571.122.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.122",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.122a",
+        "num": 122,
+        "title": "No Title",
+        "xml_file": "571.122a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.122a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.123",
+        "num": 123,
+        "title": "No Title",
+        "xml_file": "571.123.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.123",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.124",
+        "num": 124,
+        "title": "No Title",
+        "xml_file": "571.124.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.124",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.125",
+        "num": 125,
+        "title": "No Title",
+        "xml_file": "571.125.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.125",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.126",
+        "num": 126,
+        "title": "No Title",
+        "xml_file": "571.126.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.126",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.127",
+        "num": 127,
+        "title": "No Title",
+        "xml_file": "571.127.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.127",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.128",
+        "num": 128,
+        "title": "No Title",
+        "xml_file": "571.128.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.128",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.129",
+        "num": 129,
+        "title": "No Title",
+        "xml_file": "571.129.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.129",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.131",
+        "num": 131,
+        "title": "No Title",
+        "xml_file": "571.131.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.131",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.135",
+        "num": 135,
+        "title": "No Title",
+        "xml_file": "571.135.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.135",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.136",
+        "num": 136,
+        "title": "No Title",
+        "xml_file": "571.136.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.136",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.138",
+        "num": 138,
+        "title": "No Title",
+        "xml_file": "571.138.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.138",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.139",
+        "num": 139,
+        "title": "No Title",
+        "xml_file": "571.139.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.139",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.141",
+        "num": 141,
+        "title": "No Title",
+        "xml_file": "571.141.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.141",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.201",
+        "num": 201,
+        "title": "No Title",
+        "xml_file": "571.201.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.201",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.202",
+        "num": 202,
+        "title": "No Title",
+        "xml_file": "571.202.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.202",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.202a",
+        "num": 202,
+        "title": "No Title",
+        "xml_file": "571.202a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.202a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.203",
+        "num": 203,
+        "title": "No Title",
+        "xml_file": "571.203.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.203",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.204",
+        "num": 204,
+        "title": "No Title",
+        "xml_file": "571.204.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.204",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.205",
+        "num": 205,
+        "title": "No Title",
+        "xml_file": "571.205.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.205",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.205(a)",
+        "num": 205,
+        "title": "No Title",
+        "xml_file": "571.205(a).xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.205(a)",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.206",
+        "num": 206,
+        "title": "No Title",
+        "xml_file": "571.206.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.206",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.207",
+        "num": 207,
+        "title": "No Title",
+        "xml_file": "571.207.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.207",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.208",
+        "num": 208,
+        "title": "No Title",
+        "xml_file": "571.208.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.208",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.209",
+        "num": 209,
+        "title": "No Title",
+        "xml_file": "571.209.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.209",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.210",
+        "num": 210,
+        "title": "No Title",
+        "xml_file": "571.210.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.210",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.211",
+        "num": 211,
+        "title": "No Title",
+        "xml_file": "571.211.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.211",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.212",
+        "num": 212,
+        "title": "No Title",
+        "xml_file": "571.212.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.212",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.213",
+        "num": 213,
+        "title": "No Title",
+        "xml_file": "571.213.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.213",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.213a",
+        "num": 213,
+        "title": "No Title",
+        "xml_file": "571.213a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.213a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.213b",
+        "num": 213,
+        "title": "No Title",
+        "xml_file": "571.213b.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.213b",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.214",
+        "num": 214,
+        "title": "No Title",
+        "xml_file": "571.214.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.214",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.215",
+        "num": 215,
+        "title": "No Title",
+        "xml_file": "571.215.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.215",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.216",
+        "num": 216,
+        "title": "No Title",
+        "xml_file": "571.216.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.216",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.216a",
+        "num": 216,
+        "title": "No Title",
+        "xml_file": "571.216a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.216a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.217",
+        "num": 217,
+        "title": "No Title",
+        "xml_file": "571.217.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.217",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.217a",
+        "num": 217,
+        "title": "No Title",
+        "xml_file": "571.217a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.217a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.218",
+        "num": 218,
+        "title": "No Title",
+        "xml_file": "571.218.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.218",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.219",
+        "num": 219,
+        "title": "No Title",
+        "xml_file": "571.219.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.219",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.220",
+        "num": 220,
+        "title": "No Title",
+        "xml_file": "571.220.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.220",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.221",
+        "num": 221,
+        "title": "No Title",
+        "xml_file": "571.221.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.221",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.222",
+        "num": 222,
+        "title": "No Title",
+        "xml_file": "571.222.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.222",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.223",
+        "num": 223,
+        "title": "No Title",
+        "xml_file": "571.223.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.223",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.224",
+        "num": 224,
+        "title": "No Title",
+        "xml_file": "571.224.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.224",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.225",
+        "num": 225,
+        "title": "No Title",
+        "xml_file": "571.225.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.225",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.226",
+        "num": 226,
+        "title": "No Title",
+        "xml_file": "571.226.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.226",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.227",
+        "num": 227,
+        "title": "No Title",
+        "xml_file": "571.227.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.227",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.301",
+        "num": 301,
+        "title": "No Title",
+        "xml_file": "571.301.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.301",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.302",
+        "num": 302,
+        "title": "No Title",
+        "xml_file": "571.302.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.302",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.303",
+        "num": 303,
+        "title": "No Title",
+        "xml_file": "571.303.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.303",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.304",
+        "num": 304,
+        "title": "No Title",
+        "xml_file": "571.304.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.304",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.305",
+        "num": 305,
+        "title": "No Title",
+        "xml_file": "571.305.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.305",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.305a",
+        "num": 305,
+        "title": "No Title",
+        "xml_file": "571.305a.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.305a",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.307",
+        "num": 307,
+        "title": "No Title",
+        "xml_file": "571.307.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.307",
+        "crawled_at": "2025-12-25 00:16:15"
+    },
+    {
+        "id": "571.308",
+        "num": 308,
+        "title": "No Title",
+        "xml_file": "571.308.xml",
+        "web_url": "https://www.ecfr.gov/current/title-49/part-571/section-571.308",
+        "crawled_at": "2025-12-25 00:16:15"
+    }
+]

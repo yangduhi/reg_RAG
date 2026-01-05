@@ -1,0 +1,2866 @@
+[
+    {
+        "id": "kmvss_art_1",
+        "num": "1",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_1_000.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_1",
+        "num": "1",
+        "title": "목적",
+        "xml_file": "KMVSS_Art_1_001.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_2",
+        "num": "2",
+        "title": "정의",
+        "xml_file": "KMVSS_Art_2_002.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_3",
+        "num": "3",
+        "title": "구조 및 장치의 안전성 확보",
+        "xml_file": "KMVSS_Art_3_003.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_3",
+        "num": "3",
+        "title": "자동차의 안전운행에 필요한 장치의 범위",
+        "xml_file": "KMVSS_Art_3_004.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_4",
+        "num": "4",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_4_005.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_4",
+        "num": "4",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_4_006.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_4",
+        "num": "4",
+        "title": "길이ㆍ너비 및 높이",
+        "xml_file": "KMVSS_Art_4_007.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_5",
+        "num": "5",
+        "title": "최저지상고",
+        "xml_file": "KMVSS_Art_5_008.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_6",
+        "num": "6",
+        "title": "차량총중량등",
+        "xml_file": "KMVSS_Art_6_009.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_7",
+        "num": "7",
+        "title": "중량분포",
+        "xml_file": "KMVSS_Art_7_010.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_8",
+        "num": "8",
+        "title": "최대안전경사각도",
+        "xml_file": "KMVSS_Art_8_011.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_9",
+        "num": "9",
+        "title": "최소회전반경",
+        "xml_file": "KMVSS_Art_9_012.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_10",
+        "num": "10",
+        "title": "접지부분 및 접지압력",
+        "xml_file": "KMVSS_Art_10_013.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_11",
+        "num": "11",
+        "title": "원동기 및 동력전달장치",
+        "xml_file": "KMVSS_Art_11_014.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_12",
+        "num": "12",
+        "title": "주행장치",
+        "xml_file": "KMVSS_Art_12_015.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_12",
+        "num": "12",
+        "title": "타이어공기압경고장치",
+        "xml_file": "KMVSS_Art_12_016.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_13",
+        "num": "13",
+        "title": "조종장치등",
+        "xml_file": "KMVSS_Art_13_017.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_14",
+        "num": "14",
+        "title": "조향장치",
+        "xml_file": "KMVSS_Art_14_018.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_14",
+        "num": "14",
+        "title": "차로이탈경고장치",
+        "xml_file": "KMVSS_Art_14_019.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_15",
+        "num": "15",
+        "title": "제동장치",
+        "xml_file": "KMVSS_Art_15_020.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_15",
+        "num": "15",
+        "title": "자동차안정성제어장치",
+        "xml_file": "KMVSS_Art_15_021.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_15",
+        "num": "15",
+        "title": "비상자동제동장치",
+        "xml_file": "KMVSS_Art_15_022.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_16",
+        "num": "16",
+        "title": "완충장치",
+        "xml_file": "KMVSS_Art_16_023.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_17",
+        "num": "17",
+        "title": "연료장치",
+        "xml_file": "KMVSS_Art_17_024.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "전기장치",
+        "xml_file": "KMVSS_Art_18_025.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "고전원전기장치",
+        "xml_file": "KMVSS_Art_18_026.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "구동축전지",
+        "xml_file": "KMVSS_Art_18_027.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "사이버보안",
+        "xml_file": "KMVSS_Art_18_028.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "소프트웨어",
+        "xml_file": "KMVSS_Art_18_029.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_18",
+        "num": "18",
+        "title": "캠핑용자동차의 전기설비 및 캠핑설비의 안전기준",
+        "xml_file": "KMVSS_Art_18_030.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_19",
+        "num": "19",
+        "title": "차대 및 차체",
+        "xml_file": "KMVSS_Art_19_031.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_20",
+        "num": "20",
+        "title": "견인장치 및 연결장치",
+        "xml_file": "KMVSS_Art_20_032.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_21",
+        "num": "21",
+        "title": "후드걸쇠장치",
+        "xml_file": "KMVSS_Art_21_033.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_22",
+        "num": "22",
+        "title": "도난방지장치",
+        "xml_file": "KMVSS_Art_22_034.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_23",
+        "num": "23",
+        "title": "승차장치",
+        "xml_file": "KMVSS_Art_23_035.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_24",
+        "num": "24",
+        "title": "운전자의 좌석",
+        "xml_file": "KMVSS_Art_24_036.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_25",
+        "num": "25",
+        "title": "승객좌석의 규격 등",
+        "xml_file": "KMVSS_Art_25_037.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_25",
+        "num": "25",
+        "title": "접이식좌석",
+        "xml_file": "KMVSS_Art_25_038.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_26",
+        "num": "26",
+        "title": "머리지지대",
+        "xml_file": "KMVSS_Art_26_039.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_27",
+        "num": "27",
+        "title": "좌석안전띠장치등",
+        "xml_file": "KMVSS_Art_27_040.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_27",
+        "num": "27",
+        "title": "어린이보호용 좌석부착장치",
+        "xml_file": "KMVSS_Art_27_041.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_28",
+        "num": "28",
+        "title": "입석",
+        "xml_file": "KMVSS_Art_28_042.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_29",
+        "num": "29",
+        "title": "승강구",
+        "xml_file": "KMVSS_Art_29_043.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_30",
+        "num": "30",
+        "title": "비상탈출장치",
+        "xml_file": "KMVSS_Art_30_044.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_31",
+        "num": "31",
+        "title": "통로",
+        "xml_file": "KMVSS_Art_31_045.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_32",
+        "num": "32",
+        "title": "물품적재장치",
+        "xml_file": "KMVSS_Art_32_046.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_33",
+        "num": "33",
+        "title": "가스운송장치",
+        "xml_file": "KMVSS_Art_33_047.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_34",
+        "num": "34",
+        "title": "창유리 등",
+        "xml_file": "KMVSS_Art_34_048.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_35",
+        "num": "35",
+        "title": "소음방지장치",
+        "xml_file": "KMVSS_Art_35_049.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_36",
+        "num": "36",
+        "title": "배기가스발산방지장치",
+        "xml_file": "KMVSS_Art_36_050.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_37",
+        "num": "37",
+        "title": "배기관",
+        "xml_file": "KMVSS_Art_37_051.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_38",
+        "num": "38",
+        "title": "전조등",
+        "xml_file": "KMVSS_Art_38_052.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_38",
+        "num": "38",
+        "title": "안개등",
+        "xml_file": "KMVSS_Art_38_053.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_38",
+        "num": "38",
+        "title": "승하차보조등",
+        "xml_file": "KMVSS_Art_38_054.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_38",
+        "num": "38",
+        "title": "주간주행등",
+        "xml_file": "KMVSS_Art_38_055.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_38",
+        "num": "38",
+        "title": "코너링조명등",
+        "xml_file": "KMVSS_Art_38_056.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_39",
+        "num": "39",
+        "title": "후퇴등",
+        "xml_file": "KMVSS_Art_39_057.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_39",
+        "num": "39",
+        "title": "옆면보조등",
+        "xml_file": "KMVSS_Art_39_058.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_40",
+        "num": "40",
+        "title": "차폭등",
+        "xml_file": "KMVSS_Art_40_059.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_40",
+        "num": "40",
+        "title": "끝단표시등",
+        "xml_file": "KMVSS_Art_40_060.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_40",
+        "num": "40",
+        "title": "주차등",
+        "xml_file": "KMVSS_Art_40_061.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_41",
+        "num": "41",
+        "title": "번호등",
+        "xml_file": "KMVSS_Art_41_062.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_42",
+        "num": "42",
+        "title": "후미등",
+        "xml_file": "KMVSS_Art_42_063.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_43",
+        "num": "43",
+        "title": "제동등",
+        "xml_file": "KMVSS_Art_43_064.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_44",
+        "num": "44",
+        "title": "방향지시등",
+        "xml_file": "KMVSS_Art_44_065.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_44",
+        "num": "44",
+        "title": "옆면표시등",
+        "xml_file": "KMVSS_Art_44_066.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_45",
+        "num": "45",
+        "title": "비상점멸표시등",
+        "xml_file": "KMVSS_Art_45_067.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_45",
+        "num": "45",
+        "title": "후방추돌경고등",
+        "xml_file": "KMVSS_Art_45_068.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_46",
+        "num": "46",
+        "title": "군용화 장치",
+        "xml_file": "KMVSS_Art_46_069.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_47",
+        "num": "47",
+        "title": "그 밖의 등화의 제한",
+        "xml_file": "KMVSS_Art_47_070.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_48",
+        "num": "48",
+        "title": "등화에 대한 그 밖의 기준",
+        "xml_file": "KMVSS_Art_48_071.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_49",
+        "num": "49",
+        "title": "후부반사기 등",
+        "xml_file": "KMVSS_Art_49_072.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_50",
+        "num": "50",
+        "title": "간접시계장치",
+        "xml_file": "KMVSS_Art_50_073.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_51",
+        "num": "51",
+        "title": "창닦이기 장치등",
+        "xml_file": "KMVSS_Art_51_074.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_52",
+        "num": "52",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_52_075.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_53",
+        "num": "53",
+        "title": "경음기",
+        "xml_file": "KMVSS_Art_53_076.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_53",
+        "num": "53",
+        "title": "후방보행자 안전장치",
+        "xml_file": "KMVSS_Art_53_077.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_53",
+        "num": "53",
+        "title": "저소음자동차 경고음발생장치",
+        "xml_file": "KMVSS_Art_53_078.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_53",
+        "num": "53",
+        "title": "어린이 하차확인장치",
+        "xml_file": "KMVSS_Art_53_079.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_54",
+        "num": "54",
+        "title": "속도계 및 주행거리계",
+        "xml_file": "KMVSS_Art_54_080.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_55",
+        "num": "55",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_55_081.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_56",
+        "num": "56",
+        "title": "운행기록장치",
+        "xml_file": "KMVSS_Art_56_082.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_56",
+        "num": "56",
+        "title": "사고기록장치",
+        "xml_file": "KMVSS_Art_56_083.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_57",
+        "num": "57",
+        "title": "소화설비",
+        "xml_file": "KMVSS_Art_57_084.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_58",
+        "num": "58",
+        "title": "경광등 및 사이렌",
+        "xml_file": "KMVSS_Art_58_085.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_59",
+        "num": "59",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_59_086.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_59",
+        "num": "59",
+        "title": "길이ㆍ너비ㆍ높이",
+        "xml_file": "KMVSS_Art_59_087.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_60",
+        "num": "60",
+        "title": "차량총중량",
+        "xml_file": "KMVSS_Art_60_088.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_61",
+        "num": "61",
+        "title": "중량분포",
+        "xml_file": "KMVSS_Art_61_089.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_62",
+        "num": "62",
+        "title": "접지부분 및 접지압력",
+        "xml_file": "KMVSS_Art_62_090.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_63",
+        "num": "63",
+        "title": "원동기 및 동력전달장치",
+        "xml_file": "KMVSS_Art_63_091.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_63",
+        "num": "63",
+        "title": "원동기 출력",
+        "xml_file": "KMVSS_Art_63_092.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_64",
+        "num": "64",
+        "title": "주행장치",
+        "xml_file": "KMVSS_Art_64_093.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_65",
+        "num": "65",
+        "title": "조종장치 등",
+        "xml_file": "KMVSS_Art_65_094.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_66",
+        "num": "66",
+        "title": "조향장치",
+        "xml_file": "KMVSS_Art_66_095.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_67",
+        "num": "67",
+        "title": "제동장치",
+        "xml_file": "KMVSS_Art_67_096.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_68",
+        "num": "68",
+        "title": "완충장치",
+        "xml_file": "KMVSS_Art_68_097.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_69",
+        "num": "69",
+        "title": "연료장치 및 전기장치",
+        "xml_file": "KMVSS_Art_69_098.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_69",
+        "num": "69",
+        "title": "전자파 적합성",
+        "xml_file": "KMVSS_Art_69_099.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_69",
+        "num": "69",
+        "title": "고전원전기장치",
+        "xml_file": "KMVSS_Art_69_100.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_69",
+        "num": "69",
+        "title": "구동축전지",
+        "xml_file": "KMVSS_Art_69_101.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_70",
+        "num": "70",
+        "title": "차체",
+        "xml_file": "KMVSS_Art_70_102.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_71",
+        "num": "71",
+        "title": "승차장치 및 물품적재장치등",
+        "xml_file": "KMVSS_Art_71_103.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_72",
+        "num": "72",
+        "title": "방풍장치",
+        "xml_file": "KMVSS_Art_72_104.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_73",
+        "num": "73",
+        "title": "소음방지장치 및 배기가스발산방지장치의 허용기준",
+        "xml_file": "KMVSS_Art_73_105.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_74",
+        "num": "74",
+        "title": "배기관",
+        "xml_file": "KMVSS_Art_74_106.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_75",
+        "num": "75",
+        "title": "전조등",
+        "xml_file": "KMVSS_Art_75_107.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_75",
+        "num": "75",
+        "title": "주간주행등",
+        "xml_file": "KMVSS_Art_75_108.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_75",
+        "num": "75",
+        "title": "안개등",
+        "xml_file": "KMVSS_Art_75_109.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_76",
+        "num": "76",
+        "title": "번호등",
+        "xml_file": "KMVSS_Art_76_110.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_77",
+        "num": "77",
+        "title": "후미등",
+        "xml_file": "KMVSS_Art_77_111.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_77",
+        "num": "77",
+        "title": "차폭등",
+        "xml_file": "KMVSS_Art_77_112.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_78",
+        "num": "78",
+        "title": "제동등",
+        "xml_file": "KMVSS_Art_78_113.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_79",
+        "num": "79",
+        "title": "방향지시등",
+        "xml_file": "KMVSS_Art_79_114.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_79",
+        "num": "79",
+        "title": "비상점멸표시등",
+        "xml_file": "KMVSS_Art_79_115.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_80",
+        "num": "80",
+        "title": "후부반사기 및 보조반사기",
+        "xml_file": "KMVSS_Art_80_116.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_80",
+        "num": "80",
+        "title": "후퇴등",
+        "xml_file": "KMVSS_Art_80_117.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_81",
+        "num": "81",
+        "title": "기타의 등화",
+        "xml_file": "KMVSS_Art_81_118.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_82",
+        "num": "82",
+        "title": "등화에 대한 그 밖의 기준",
+        "xml_file": "KMVSS_Art_82_119.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_83",
+        "num": "83",
+        "title": "경음기",
+        "xml_file": "KMVSS_Art_83_120.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_84",
+        "num": "84",
+        "title": "간접시계장치",
+        "xml_file": "KMVSS_Art_84_121.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_85",
+        "num": "85",
+        "title": "속도계",
+        "xml_file": "KMVSS_Art_85_122.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_85",
+        "num": "85",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_85_123.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_85",
+        "num": "85",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_85_124.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_85",
+        "num": "85",
+        "title": "적용범위",
+        "xml_file": "KMVSS_Art_85_125.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_86",
+        "num": "86",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_86_126.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_86",
+        "num": "86",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_86_127.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_87",
+        "num": "87",
+        "title": "가속제어장치",
+        "xml_file": "KMVSS_Art_87_128.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_88",
+        "num": "88",
+        "title": "계기판넬",
+        "xml_file": "KMVSS_Art_88_129.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_88",
+        "num": "88",
+        "title": "타이어",
+        "xml_file": "KMVSS_Art_88_130.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_88",
+        "num": "88",
+        "title": "타이어공기압경고장치",
+        "xml_file": "KMVSS_Art_88_131.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_89",
+        "num": "89",
+        "title": "조향장치",
+        "xml_file": "KMVSS_Art_89_132.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_89",
+        "num": "89",
+        "title": "차로이탈경고장치",
+        "xml_file": "KMVSS_Art_89_133.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_90",
+        "num": "90",
+        "title": "제동장치",
+        "xml_file": "KMVSS_Art_90_134.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_90",
+        "num": "90",
+        "title": "자동차안정성제어장치",
+        "xml_file": "KMVSS_Art_90_135.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_90",
+        "num": "90",
+        "title": "비상자동제동장치",
+        "xml_file": "KMVSS_Art_90_136.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_91",
+        "num": "91",
+        "title": "충돌 시의 인화성액체연료장치 안전성",
+        "xml_file": "KMVSS_Art_91_137.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_91",
+        "num": "91",
+        "title": "충돌 시의 가스연료장치 안전성",
+        "xml_file": "KMVSS_Art_91_138.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_91",
+        "num": "91",
+        "title": "충돌 시의 고전원전기장치 안전성",
+        "xml_file": "KMVSS_Art_91_139.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_91",
+        "num": "91",
+        "title": "전복 시의 연료장치 안전성",
+        "xml_file": "KMVSS_Art_91_140.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_92",
+        "num": "92",
+        "title": "천정구조",
+        "xml_file": "KMVSS_Art_92_141.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_93",
+        "num": "93",
+        "title": "범퍼",
+        "xml_file": "KMVSS_Art_93_142.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_94",
+        "num": "94",
+        "title": "운전자의 시계범위 등",
+        "xml_file": "KMVSS_Art_94_143.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_95",
+        "num": "95",
+        "title": "차실내장재의 내인화성",
+        "xml_file": "KMVSS_Art_95_144.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_96",
+        "num": "96",
+        "title": "후부안전판",
+        "xml_file": "KMVSS_Art_96_145.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_97",
+        "num": "97",
+        "title": "운전자 및 승객좌석의 설치",
+        "xml_file": "KMVSS_Art_97_146.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_98",
+        "num": "98",
+        "title": "좌석등받이",
+        "xml_file": "KMVSS_Art_98_147.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_99",
+        "num": "99",
+        "title": "머리지지대",
+        "xml_file": "KMVSS_Art_99_148.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_100",
+        "num": "100",
+        "title": "팔걸이",
+        "xml_file": "KMVSS_Art_100_149.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_101",
+        "num": "101",
+        "title": "햇빛가리개",
+        "xml_file": "KMVSS_Art_101_150.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_102",
+        "num": "102",
+        "title": "충돌 시의 승객보호",
+        "xml_file": "KMVSS_Art_102_151.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_102",
+        "num": "102",
+        "title": "보행자 보호",
+        "xml_file": "KMVSS_Art_102_152.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_102",
+        "num": "102",
+        "title": "고정벽정면충돌 안전성",
+        "xml_file": "KMVSS_Art_102_153.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_102",
+        "num": "102",
+        "title": "기둥측면충돌 안전성",
+        "xml_file": "KMVSS_Art_102_154.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_103",
+        "num": "103",
+        "title": "좌석안전띠장치 등",
+        "xml_file": "KMVSS_Art_103_155.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_103",
+        "num": "103",
+        "title": "어린이보호용 좌석부착장치",
+        "xml_file": "KMVSS_Art_103_156.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_104",
+        "num": "104",
+        "title": "승강구",
+        "xml_file": "KMVSS_Art_104_157.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_105",
+        "num": "105",
+        "title": "창유리의 안전성 등",
+        "xml_file": "KMVSS_Art_105_158.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_106",
+        "num": "106",
+        "title": "원동기 출력",
+        "xml_file": "KMVSS_Art_106_159.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_107",
+        "num": "107",
+        "title": "전자파 적합성",
+        "xml_file": "KMVSS_Art_107_160.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_108",
+        "num": "108",
+        "title": "내부격실문",
+        "xml_file": "KMVSS_Art_108_161.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_108",
+        "num": "108",
+        "title": "에너지소비효율",
+        "xml_file": "KMVSS_Art_108_162.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_108",
+        "num": "108",
+        "title": "1회 충전 후 주행가능거리",
+        "xml_file": "KMVSS_Art_108_163.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_109",
+        "num": "109",
+        "title": "창닦이기장치등",
+        "xml_file": "KMVSS_Art_109_164.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_110",
+        "num": "110",
+        "title": "속도계",
+        "xml_file": "KMVSS_Art_110_165.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_110",
+        "num": "110",
+        "title": "최고속도제한장치",
+        "xml_file": "KMVSS_Art_110_166.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_111",
+        "num": "111",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_111_167.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_111",
+        "num": "111",
+        "title": "자율주행시스템의 종류",
+        "xml_file": "KMVSS_Art_111_168.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_111",
+        "num": "111",
+        "title": "자율주행시스템의 운행가능영역 지정",
+        "xml_file": "KMVSS_Art_111_169.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_111",
+        "num": "111",
+        "title": "승용자동차의 부분 자율주행시스템 안전기준",
+        "xml_file": "KMVSS_Art_111_170.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_112_171.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "부품 또는 장치의 성능시험기준",
+        "xml_file": "KMVSS_Art_112_172.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_112_173.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "브레이크호스",
+        "xml_file": "KMVSS_Art_112_174.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "좌석안전띠장치",
+        "xml_file": "KMVSS_Art_112_175.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "등화장치",
+        "xml_file": "KMVSS_Art_112_176.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "후부반사기",
+        "xml_file": "KMVSS_Art_112_177.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "후부안전판",
+        "xml_file": "KMVSS_Art_112_178.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "창유리",
+        "xml_file": "KMVSS_Art_112_179.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "안전삼각대",
+        "xml_file": "KMVSS_Art_112_180.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "후부반사판 및 후부반사지",
+        "xml_file": "KMVSS_Art_112_181.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "브레이크라이닝",
+        "xml_file": "KMVSS_Art_112_182.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "휠",
+        "xml_file": "KMVSS_Art_112_183.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "반사띠",
+        "xml_file": "KMVSS_Art_112_184.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "저속차량용 후부표시판",
+        "xml_file": "KMVSS_Art_112_185.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_112",
+        "num": "112",
+        "title": "전기자동차 등에 사용되는 구동축전지",
+        "xml_file": "KMVSS_Art_112_186.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_113",
+        "num": "113",
+        "title": "제목없음",
+        "xml_file": "KMVSS_Art_113_187.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_113",
+        "num": "113",
+        "title": "승차정원 및 최대적재량",
+        "xml_file": "KMVSS_Art_113_188.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_114",
+        "num": "114",
+        "title": "기준적용의 특례",
+        "xml_file": "KMVSS_Art_114_189.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_114",
+        "num": "114",
+        "title": "장치 기준에 관한 특례",
+        "xml_file": "KMVSS_Art_114_190.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_115",
+        "num": "115",
+        "title": "제원의 허용차",
+        "xml_file": "KMVSS_Art_115_191.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_art_116",
+        "num": "116",
+        "title": "시험방법 등의 고시",
+        "xml_file": "KMVSS_Art_116_192.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0001",
+        "num": "0001",
+        "title": "차량좌표계(제2조제5호 관련)",
+        "xml_file": "KMVSS_Att_0001_000.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0001",
+        "num": "0001",
+        "title": "자동차 및 이륜자동차의 공기압타이어 표기ㆍ구조 및 성능 기준(제12조제1항 및 제64조제1항 관련)",
+        "xml_file": "KMVSS_Att_0001_001.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0002",
+        "num": "0002",
+        "title": "손조작식 조종장치 또는 표시장치의 식별표시 및 조명기준(제13조제4항 및 제5항 관련)",
+        "xml_file": "KMVSS_Att_0002_002.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0003",
+        "num": "0003",
+        "title": "주제동장치의급제동정지거리및조작력기준[제15조제1항제10호관련]",
+        "xml_file": "KMVSS_Att_0003_003.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0004",
+        "num": "0004",
+        "title": "주제동장치의제동능력및조작력기준[제15조제1항제11호관련]",
+        "xml_file": "KMVSS_Att_0004_004.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0004",
+        "num": "0004",
+        "title": "주차제동장치의 제동능력 및 조작력 기준(제15조제1항제12호관련)",
+        "xml_file": "KMVSS_Att_0004_005.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0004",
+        "num": "0004",
+        "title": "제동력지원장치의 성능기준(제15조제12항 관련)",
+        "xml_file": "KMVSS_Att_0004_006.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0004",
+        "num": "0004",
+        "title": "관성제동장치의 구조기준(제15조제4항제8호 관련)",
+        "xml_file": "KMVSS_Att_0004_007.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0004",
+        "num": "0004",
+        "title": "제동력 제어계통이 전기식인 승용자동차의 주제동장치의 구조 및 성능기준(제15조제14항 관련)",
+        "xml_file": "KMVSS_Att_0004_008.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "고전원전기장치 절연 안전성 등에 관한 기준(제18조의2 및 제18조의6제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0005_009.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "긴급제동신호 및 전기회생제동장치의 작동기준(제15조제10항 관련)",
+        "xml_file": "KMVSS_Att_0005_010.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "어린이 보호표지 및 정지표시장치(제19조제9항ㆍ제10항 관련)",
+        "xml_file": "KMVSS_Att_0005_011.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "어린이보호용 좌석부착장치의 설치기준(제27조의2제7호 관련)",
+        "xml_file": "KMVSS_Att_0005_012.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0005_013.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "간접시계장치 설치대상 및 기준(제50조제1항 관련)",
+        "xml_file": "KMVSS_Att_0005_014.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "간접시계장치 시계범위 기준(제50조제1항 및 제84조 관련)",
+        "xml_file": "KMVSS_Att_0005_015.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "카메라모니터 시스템 성능기준(제50조제1항제2호 관련)",
+        "xml_file": "KMVSS_Att_0005_016.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "삭제 <2017. 1. 9.>",
+        "xml_file": "KMVSS_Att_0005_017.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "사륜형 이륜자동차 장애물회피시험로 형태 및 규격(제64조제3항제3호 관련)",
+        "xml_file": "KMVSS_Att_0005_018.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 손조작식 조종장치의 식별표시 및 조명기준(제65조제2항 관련)",
+        "xml_file": "KMVSS_Att_0005_019.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 표시장치의 식별표시 및 조명기준(제65조제3항 관련)",
+        "xml_file": "KMVSS_Att_0005_020.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차의 제동능력 기준(제67조제1항제4호ㆍ제12호 및 제2항제2호 관련)",
+        "xml_file": "KMVSS_Att_0005_021.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차의 등화별 전구형식 및 전력기준(제82조제3항 관련)",
+        "xml_file": "KMVSS_Att_0005_022.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차의 연료장치 및 구성부품 기준(제69조제1항 관련)",
+        "xml_file": "KMVSS_Att_0005_023.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차의 손잡이 설치기준(제71조제1항제2호 후단 관련)",
+        "xml_file": "KMVSS_Att_0005_024.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 주행빔 전조등 설치 및 광도기준(제75조 관련)",
+        "xml_file": "KMVSS_Att_0005_025.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 변환빔 전조등 설치 및 광도기준(제75조 관련)",
+        "xml_file": "KMVSS_Att_0005_026.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 후미등 설치 및 광도기준(제77조 관련)",
+        "xml_file": "KMVSS_Att_0005_027.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 차폭등 설치 및 광도기준(제77조의2 관련)",
+        "xml_file": "KMVSS_Att_0005_028.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 제동등 설치 및 광도기준(제78조제1항 및 제2항 관련)",
+        "xml_file": "KMVSS_Att_0005_029.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 방향지시등 설치 및 광도기준(제79조 관련)",
+        "xml_file": "KMVSS_Att_0005_030.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 후부반사기 등 설치기준(제80조제1항 및 제2항 관련)",
+        "xml_file": "KMVSS_Att_0005_031.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "좌석안전띠 경고장치 설치 및 작동기준(제27조제4항 관련)",
+        "xml_file": "KMVSS_Att_0005_032.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "사고기록장치의 장착기준(제56조의2제3항 관련)",
+        "xml_file": "KMVSS_Att_0005_033.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "삭제 <2022. 10. 26.>",
+        "xml_file": "KMVSS_Att_0005_034.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "입석면적 공간 및 손잡이 설치 기준(제23조제1항제5호, 제28조제2항 및 제3항, 제29조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0005_035.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "운전자 좌석 공간(제24조제3항 관련)",
+        "xml_file": "KMVSS_Att_0005_036.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "통로 측정장치(제28조제1항 및 제31조 관련)",
+        "xml_file": "KMVSS_Att_0005_037.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "승차정원 16인 이상 승합자동차의 승강구 기준(제29조제1항제1호 관련)",
+        "xml_file": "KMVSS_Att_0005_038.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "승차정원 16인 이상 승합자동차의 비상탈출장치 설치 및 구조기준(제30조 관련)",
+        "xml_file": "KMVSS_Att_0005_039.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "승용자동차의 좌석규격(제24조제2항, 제25조제1항 관련)",
+        "xml_file": "KMVSS_Att_0005_040.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 주간주행등 설치 및 광도기준(제75조의2 관련)",
+        "xml_file": "KMVSS_Att_0005_041.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 앞면안개등 설치 및 광도기준(제75조의3제1항 관련)",
+        "xml_file": "KMVSS_Att_0005_042.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 뒷면안개등 설치 및 광도기준(제75조의3제2항 관련)",
+        "xml_file": "KMVSS_Att_0005_043.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜자동차 번호등 설치 및 휘도기준(제76조 관련)",
+        "xml_file": "KMVSS_Att_0005_044.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0005",
+        "num": "0005",
+        "title": "이륜형 및 삼륜형 이륜자동차 비상점멸표시등 작동기준(제79조의2제2항 관련)",
+        "xml_file": "KMVSS_Att_0005_045.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "삭제 <2023. 11. 23.>",
+        "xml_file": "KMVSS_Att_0006_046.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "조향장치에 대한 기준(제89조제2항 관련)",
+        "xml_file": "KMVSS_Att_0006_047.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "주행빔 전조등의 설치 및 광도기준(제38조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_048.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "변환빔 전조등의 설치 및 광도기준(제38조제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_049.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "적응형 전조등의 설치 및 광도기준(제38조제3항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_050.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "앞면안개등의 설치 및 광도기준(제38조의2제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_051.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "뒷면안개등의 설치 및 광도기준(제38조의2제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_052.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "주간주행등의 설치 및 광도기준(제38조의4제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_053.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "코너링조명등의 설치 및 광도기준(제38조의5제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_054.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "후퇴등의 설치 및 광도기준(제39조제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_055.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "차폭등의 설치 및 광도기준(제40조제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_056.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "끝단표시등의 설치 및 광도기준(제40조의2제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_057.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "번호등의 설치 및 휘도기준(제41조제2호 관련)",
+        "xml_file": "KMVSS_Att_0006_058.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "후미등의 설치 및 광도기준(제42조제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_059.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "제동등의 설치 및 광도기준(제43조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_060.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "보조제동등의 설치 및 광도기준(제43조제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_061.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "방향지시등의 설치 및 광도기준(제44조제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_062.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "옆면표시등의 설치 및 광도기준(제44조의2제2호 관련)",
+        "xml_file": "KMVSS_Att_0006_063.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "비상점멸표시등의 작동기준(제45조제2호 관련)",
+        "xml_file": "KMVSS_Att_0006_064.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "후방추돌경고등의 작동기준(제45조의2제2호 관련)",
+        "xml_file": "KMVSS_Att_0006_065.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "자동차 및 이륜자동차 광원형식 및 전력기준(제48조제3항 및 제82조제3항 관련)",
+        "xml_file": "KMVSS_Att_0006_066.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "자동차와 이륜자동차 등화장치 및 반사장치의 색도기준(제48조제5항, 제78조제1항 및 제82조제4항 관련)",
+        "xml_file": "KMVSS_Att_0006_067.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "후부반사기의 설치기준(제49조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_068.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "피견인자동차용 삼각형 반사기의 설치기준(제49조제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_069.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "앞면반사기의 설치기준(제49조제3항제3호 관련)",
+        "xml_file": "KMVSS_Att_0006_070.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "옆면반사기의 설치기준(제49조제4항제2호 관련)",
+        "xml_file": "KMVSS_Att_0006_071.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "반사기의 반사성능 기준(제49조제5항 및 제80조제3항 관련)",
+        "xml_file": "KMVSS_Att_0006_072.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "후부반사판의 설치 및 반사성능 기준(제49조제6항 및 제112조의9제1호 관련)",
+        "xml_file": "KMVSS_Att_0006_073.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "삭제 <2023. 11. 23.>",
+        "xml_file": "KMVSS_Att_0006_074.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "승하차보조등의 설치기준(제38조의3 관련)",
+        "xml_file": "KMVSS_Att_0006_075.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "옆면보조등의 설치 및 광도기준(제39조의2 관련)",
+        "xml_file": "KMVSS_Att_0006_076.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "주차등의 설치 및 광도기준(제40조의3 관련)",
+        "xml_file": "KMVSS_Att_0006_077.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0006",
+        "num": "0006",
+        "title": "저소음자동차 경고음발생장치 설치 기준(제53조의3 관련)",
+        "xml_file": "KMVSS_Att_0006_078.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "승용자동차의 제동능력 기준(제90조제1호관련)",
+        "xml_file": "KMVSS_Att_0007_079.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "승합자동차·화물자동차(피견인자동차를 제외한다) 및 특수자동차의 제동능력 기준(제90조제2호관련)",
+        "xml_file": "KMVSS_Att_0007_080.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "피견인자동차의 제동능력 기준(제90조제3호관련)",
+        "xml_file": "KMVSS_Att_0007_081.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "바퀴잠김방지식 주제동장치를 설치한 자동차(피견인자동차를 제외한다)의 제동능력 기준(제90조제4호관련)",
+        "xml_file": "KMVSS_Att_0007_082.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "바퀴잠김방지식 주제동장치를 설치한 피견인자동차의 제동능력 기준(제90조제5호관련)",
+        "xml_file": "KMVSS_Att_0007_083.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "연결자동차의선회시제동능력기준[제90조제6호관련]",
+        "xml_file": "KMVSS_Att_0007_084.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "자동차안정성제어장치에 대한 기준(제90조의2 관련)",
+        "xml_file": "KMVSS_Att_0007_085.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "승합자동차 및 차량총중량 3.5톤 초과 화물ㆍ특수자동차에 설치되는 비상자동제동장치의 구조 및 성능기준(제90조의3제1호 관련)",
+        "xml_file": "KMVSS_Att_0007_086.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0007",
+        "num": "0007",
+        "title": "승용자동차 및 차량총중량 3.5톤 이하 화물ㆍ특수자동차에 설치되는 비상자동제동장치의 구조 및 성능 기준(제90조의3제2호 관련)",
+        "xml_file": "KMVSS_Att_0007_087.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0008",
+        "num": "0008",
+        "title": "삭제 <2003.2.25>",
+        "xml_file": "KMVSS_Att_0008_088.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0009",
+        "num": "0009",
+        "title": "삭제 <2003.2.25>",
+        "xml_file": "KMVSS_Att_0009_089.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0010",
+        "num": "0010",
+        "title": "인화성액체자동차의 연료장치 충돌시험기준(제91조 관련)",
+        "xml_file": "KMVSS_Att_0010_090.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "액화석유가스자동차의 연료장치 충돌시험기준(제91조의2제1항 관련)",
+        "xml_file": "KMVSS_Att_0011_091.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "천연가스자동차의 연료장치 충돌시험기준(제91조의2제2항 관련)",
+        "xml_file": "KMVSS_Att_0011_092.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "수소가스를 연료로 사용하는 자동차의 연료장치 충돌시험기준(제91조의2제3항 관련)",
+        "xml_file": "KMVSS_Att_0011_093.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "고전원전기장치의 충돌시험기준(제91조의3 관련)",
+        "xml_file": "KMVSS_Att_0011_094.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "정적(靜的) 전복시험기준(제91조의4 관련)",
+        "xml_file": "KMVSS_Att_0011_095.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0011",
+        "num": "0011",
+        "title": "범퍼의 안전기준(제93조 관련)",
+        "xml_file": "KMVSS_Att_0011_096.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0012",
+        "num": "0012",
+        "title": "운전자의 전방시계범위(제94조관련)",
+        "xml_file": "KMVSS_Att_0012_097.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0013",
+        "num": "0013",
+        "title": "후부안전판의 시험하중 및 설치강도기준(제96조 및 제112조의6 관련)",
+        "xml_file": "KMVSS_Att_0013_098.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "변형구조물 부분정면 충돌 시 승객보호 기준(제102조제1항 및 제2항 관련)",
+        "xml_file": "KMVSS_Att_0014_099.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "측면충돌 시 승객보호 기준(제102조제1항 및 제2항 관련)",
+        "xml_file": "KMVSS_Att_0014_100.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "충돌시 차체구조기준(제102조제3항 관련)",
+        "xml_file": "KMVSS_Att_0014_101.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "승합자동차의 차체강도기준(제102조제3항 관련)",
+        "xml_file": "KMVSS_Att_0014_102.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "자동차에어백 경고문구 표기기준(제102조제4항 관련)",
+        "xml_file": "KMVSS_Att_0014_103.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "보행자머리모형 및 보행자다리모형 상해기준(제102조의2제2호나목 관련)",
+        "xml_file": "KMVSS_Att_0014_104.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "고정벽정면충돌 기준(제102조의3 관련)",
+        "xml_file": "KMVSS_Att_0014_105.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0014",
+        "num": "0014",
+        "title": "기둥측면충돌 기준(제102조의4 관련)",
+        "xml_file": "KMVSS_Att_0014_106.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0015",
+        "num": "0015",
+        "title": "좌석안전띠의조절기준[제103조제1항관련]",
+        "xml_file": "KMVSS_Att_0015_107.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0016",
+        "num": "0016",
+        "title": "좌석안전띠 성능기준(제103조제1항 및 제112조의3 관련)",
+        "xml_file": "KMVSS_Att_0016_108.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0017",
+        "num": "0017",
+        "title": "3점식안전띠의어깨부분부착장치의설치범위[제103조제3항제4호관련]",
+        "xml_file": "KMVSS_Att_0017_109.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0018",
+        "num": "0018",
+        "title": "앞면창유리의보호구역[제105조제1항제3호관련]",
+        "xml_file": "KMVSS_Att_0018_110.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_111.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_112.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_113.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_114.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_115.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_116.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2012.2.15>",
+        "xml_file": "KMVSS_Att_0019_117.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2012.2.15>",
+        "xml_file": "KMVSS_Att_0019_118.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0019",
+        "num": "0019",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0019_119.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0020",
+        "num": "0020",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0020_120.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0021",
+        "num": "0021",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0021_121.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0022",
+        "num": "0022",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0022_122.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0023",
+        "num": "0023",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0023_123.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0023",
+        "num": "0023",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0023_124.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0024",
+        "num": "0024",
+        "title": "전자파 적합성 기준(제107조 관련)",
+        "xml_file": "KMVSS_Att_0024_125.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0025",
+        "num": "0025",
+        "title": "창닦이기와 세정액분사장치의 세척부분과 서리제거장치 및 안개제거장치의 제거부분(제109조관련)",
+        "xml_file": "KMVSS_Att_0025_126.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0026",
+        "num": "0026",
+        "title": "최고속도제한장치의 구조 및 성능기준(제110조의2 관련)",
+        "xml_file": "KMVSS_Att_0026_127.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0027",
+        "num": "0027",
+        "title": "부분 자율주행시스템의 안전기준(제111조의3 관련)",
+        "xml_file": "KMVSS_Att_0027_128.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0028",
+        "num": "0028",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0028_129.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0028",
+        "num": "0028",
+        "title": "어린이운송용 승합자동차 표시등의 광도기준(제48조제4항제6호 관련)",
+        "xml_file": "KMVSS_Att_0028_130.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0028",
+        "num": "0028",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0028_131.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0028",
+        "num": "0028",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0028_132.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0029",
+        "num": "0029",
+        "title": "삭제 <2014.6.10>",
+        "xml_file": "KMVSS_Att_0029_133.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "[별표 25]로 이동 <2019. 12. 31.>",
+        "xml_file": "KMVSS_Att_0030_134.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "[별표 26]으로 이동 <2019. 12. 31.>",
+        "xml_file": "KMVSS_Att_0030_135.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "[별표 24]로 이동 <2019. 12. 31.>",
+        "xml_file": "KMVSS_Att_0030_136.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "브레이크호스 기준(제112조의2 관련)",
+        "xml_file": "KMVSS_Att_0030_137.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "안전삼각대 기준(제112조의8 관련)",
+        "xml_file": "KMVSS_Att_0030_138.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "브레이크라이닝 기준(제112조의10 관련)",
+        "xml_file": "KMVSS_Att_0030_139.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "자동차 휠 기준(제112조의11 관련)",
+        "xml_file": "KMVSS_Att_0030_140.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0030",
+        "num": "0030",
+        "title": "저속자동차용 후부표시판 형상 및 반사성능기준(제112조의13 관련)",
+        "xml_file": "KMVSS_Att_0030_141.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0031",
+        "num": "0031",
+        "title": "길이·너비 등에 대한 특례기준(제114조제1항 관련)",
+        "xml_file": "KMVSS_Att_0031_142.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0032",
+        "num": "0032",
+        "title": "도로외의장소에서사용할목적으로제작하는자동차의표시[제114조제3항관련]",
+        "xml_file": "KMVSS_Att_0032_143.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0032",
+        "num": "0032",
+        "title": "반사띠 및 특례적용 표시의 기준(제112조의12 및 제114조제11항 관련)",
+        "xml_file": "KMVSS_Att_0032_144.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0032",
+        "num": "0032",
+        "title": "화물자동차의 적재량 표시 방법(제19조제2항 관련)",
+        "xml_file": "KMVSS_Att_0032_145.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0033",
+        "num": "0033",
+        "title": "제원의 허용차(제115조관련)",
+        "xml_file": "KMVSS_Att_0033_146.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0034",
+        "num": "0034",
+        "title": "저속전기자동차 특례기준(제114조제11항 관련)",
+        "xml_file": "KMVSS_Att_0034_147.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0035",
+        "num": "0035",
+        "title": "초소형자동차 주행빔 전조등의 설치 및 광도기준(제38조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0035_148.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0036",
+        "num": "0036",
+        "title": "초소형자동차 변환빔 전조등의 설치 및 광도기준(제38조제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0036_149.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0037",
+        "num": "0037",
+        "title": "초소형자동차 앞면안개등의 설치 및 광도기준(제38조의2제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0037_150.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0038",
+        "num": "0038",
+        "title": "초소형자동차 뒷면안개등의 설치 및 광도기준(제38조의2제2항제3호 관련)",
+        "xml_file": "KMVSS_Att_0038_151.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0039",
+        "num": "0039",
+        "title": "초소형자동차 주간주행등의 설치 및 광도기준(제38조의4제3호 관련)",
+        "xml_file": "KMVSS_Att_0039_152.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0040",
+        "num": "0040",
+        "title": "초소형자동차 후퇴등의 설치 및 광도기준(제39조제3호 관련)",
+        "xml_file": "KMVSS_Att_0040_153.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0041",
+        "num": "0041",
+        "title": "초소형자동차 차폭등의 설치 및 광도기준(제40조제3호 관련)",
+        "xml_file": "KMVSS_Att_0041_154.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0042",
+        "num": "0042",
+        "title": "초소형자동차 번호등의 설치 및 광도기준(제41조제2호 관련)",
+        "xml_file": "KMVSS_Att_0042_155.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0043",
+        "num": "0043",
+        "title": "초소형자동차 후미등의 설치 및 광도기준(제42조제3호 관련)",
+        "xml_file": "KMVSS_Att_0043_156.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0044",
+        "num": "0044",
+        "title": "초소형자동차 제동등의 설치 및 광도기준(제43조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0044_157.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0045",
+        "num": "0045",
+        "title": "초소형자동차 방향지시등의 설치 및 광도기준(제44조제3호 관련)",
+        "xml_file": "KMVSS_Att_0045_158.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0046",
+        "num": "0046",
+        "title": "초소형자동차 옆면표시등의 설치 및 광도기준(제44조의2제2호 관련)",
+        "xml_file": "KMVSS_Att_0046_159.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0047",
+        "num": "0047",
+        "title": "초소형자동차 비상점멸표시등의 작동기준(제45조제2호 관련)",
+        "xml_file": "KMVSS_Att_0047_160.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0048",
+        "num": "0048",
+        "title": "초소형자동차 후부반사기의 설치 및 반사성능 기준(제49조제1항제3호 관련)",
+        "xml_file": "KMVSS_Att_0048_161.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0049",
+        "num": "0049",
+        "title": "초소형자동차 옆면반사기의 설치 및 반사성능 기준(제49조제4항제3호 관련)",
+        "xml_file": "KMVSS_Att_0049_162.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0050",
+        "num": "0050",
+        "title": "초소형자동차 간접시계장치의 설치 및 시계범위 기준(제50조제1항제1호 관련)",
+        "xml_file": "KMVSS_Att_0050_163.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    },
+    {
+        "id": "kmvss_att_0051",
+        "num": "0051",
+        "title": "초소형자동차 제동능력 기준(제90조제1호ㆍ제2호 및 제4호 관련)",
+        "xml_file": "KMVSS_Att_0051_164.xml",
+        "web_url": "https://www.law.go.kr",
+        "crawled_at": "2025-12-26 21:56:36"
+    }
+]
