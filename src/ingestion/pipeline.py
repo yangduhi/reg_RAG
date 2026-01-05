@@ -147,7 +147,10 @@ class IngestionPipeline:
                 ingested_docs = await loader.load(file_path)
                 
                 if not ingested_docs:
-                    raise ValueError("로더가 문서를 반환하지 않았습니다.")
+                    logger.warning(f"⚠️ 문서가 추출되지 않음 (Skipped): {file_path.name}")
+                    # 실패가 아닌 'SKIPPED' 상태로 기록하거나, 일단 성공으로 처리하되 내용은 없음
+                    processed_files.append((file_path, file_hash, StatusEnum.SUCCESS, "Skipped (No Content)"))
+                    continue
 
                 # 내부 문서 형식을 LangChain 형식으로 변환
                 langchain_docs = [i_doc.to_langchain_format() for i_doc in ingested_docs]

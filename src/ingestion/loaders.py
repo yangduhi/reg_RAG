@@ -94,6 +94,7 @@ class UniversalXmlLoader(BaseLoader):
             full_text = self._extract_text(soup, is_korean)
 
             if len(full_text.strip()) < 10:
+                logger.warning(f"⚠️ XML content too short ({len(full_text.strip())} chars). Skipping: {file_path.name}")
                 return []
 
             if region == RegulationRegion.KMVSS:
@@ -173,6 +174,7 @@ class ECEPDFLoader(BaseLoader):
 
                     full_content = text + "\n".join(md_tables)
                     if len(full_content.strip()) < 50:
+                        logger.debug(f"Skipping page {i+1} of {file_path.name} (Content too short)")
                         continue
                     
                     docs.append(
@@ -187,6 +189,10 @@ class ECEPDFLoader(BaseLoader):
                             ),
                         )
                     )
+            
+            if not docs:
+                logger.warning(f"⚠️ No content extracted from PDF: {file_path.name}")
+                
             return docs
         except Exception as e:
             logger.error(f"Error processing PDF file ({file_path.name}): {e}", exc_info=True)

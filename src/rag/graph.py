@@ -100,7 +100,10 @@ class RAGGraph:
         question = state["question"]
         documents = state["documents"]
         
-        logger.info("--- [Graph: Grade] 문서 평가 시작 ---")
+        # [최적화] 너무 많은 문서를 평가하면 느리므로 상위 10개만 평가 (또는 설정에 따름)
+        # 검색 단계에서 이미 점수순으로 정렬되어 있으므로 상위 문서가 가장 중요함.
+        documents_to_grade = documents[:10] 
+        logger.info(f"--- [Graph: Grade] 상위 {len(documents_to_grade)}개 문서 평가 시작 ---")
         
         # 평가용 LLM 체인 설정
         llm_with_tool = self.engine.llm.with_structured_output(GradeDocuments)
@@ -115,19 +118,23 @@ class RAGGraph:
         
         chain = prompt | llm_with_tool
         
-        filtered_docs = []
-        for d in documents:
-            try:
-                score = await chain.ainvoke({"question": question, "context": d.page_content})
-                grade = score.binary_score
-            except Exception:
-                # 에러 시 안전하게 포함
-                grade = "yes"
-            
-            if grade == "yes":
-                filtered_docs.append(d)
+        # [최적화] 비동기 병렬 처리
+        import asyncio
         
-        logger.info(f"--- [Graph: Grade] 관련 있는 문서: {len(filtered_docs)} / {len(documents)} ---")
+        async def grade_doc(doc):
+            try:
+                score = await chain.ainvoke({"question": question, "context": doc.page_content})
+                return doc if score.binary_score == "yes" else None
+            except Exception:
+                return doc # 에러 시 안전하게 포함
+
+        # 모든 문서에 대해 병렬로 grade 실행
+        results = await asyncio.gather(*[grade_doc(d) for d in documents_to_grade])
+        
+        # None(관련 없음) 제외
+        filtered_docs = [doc for doc in results if doc is not None]
+        
+        logger.info(f"--- [Graph: Grade] 관련 있는 문서: {len(filtered_docs)} / {len(documents_to_grade)} (Total Retrieved: {len(documents)}) ---")
         return {"documents": filtered_docs, "question": question}
 
     async def transform_query(self, state: GraphState):

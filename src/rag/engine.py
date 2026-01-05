@@ -108,7 +108,7 @@ class RAGEngine:
         self.graph = RAGGraph(self)
         
         # 백그라운드 초기화 작업 시작
-        self.initialization_task: Coroutine = self._initialize_retrievers()
+        self.initialization_task = asyncio.create_task(self._initialize_retrievers())
 
     async def _initialize_retrievers(self) -> None:
         """
@@ -323,7 +323,7 @@ class RAGEngine:
             self.metadata_cache = self._load_all_metadata()
             logger.info("🔄 데이터 변경 감지: 검색 엔진을 다시 로드합니다.")
             # 새 데이터를 반영하기 위해 검색기 재초기화
-            self.initialization_task = self._initialize_retrievers()
+            self.initialization_task = asyncio.create_task(self._initialize_retrievers())
             await self.initialization_task
 
             return "✅ 데이터 처리 및 엔진 업데이트 완료!"
