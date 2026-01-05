@@ -438,8 +438,8 @@ class RAGEngine:
         merged = {}
         candidates = [
             settings.DATA_DIR / "metadata_kmvss.json",
-            settings.DATA_DIR / "crawled_metadata_ece.json",
-            settings.DATA_DIR / "crawled_metadata.json",
+            settings.DATA_DIR / "metadata_ece.json",
+            settings.DATA_DIR / "metadata_fmvss.json",
             settings.METADATA_FILE,
         ]
         for path in candidates:
