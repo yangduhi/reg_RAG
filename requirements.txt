@@ -7,6 +7,7 @@ langchain-classic==1.0.1
 langchain-chroma==1.1.0  # Vector Store
 langchain-google-genai==4.1.2  # LLM (Gemini)
 langchain-huggingface==1.2.0  # Embeddings
+langgraph==0.0.10 # Orchestration
 
 # --- Vector Database & Search ---
 chromadb==1.4.0

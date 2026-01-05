@@ -1,8 +1,8 @@
 # check_db.py
 from src.rag.vectorstore import VectorStoreManager
+import sys
 
-
-def check():
+def check(query=None):
     print("🔍 데이터베이스 검사 중...")
     try:
         vm = VectorStoreManager()
@@ -13,6 +13,20 @@ def check():
 
         if total == 0:
             print("❌ DB가 비어있습니다!")
+            return
+
+        if query:
+            print(f"\n🔎 검색 테스트: '{query}'")
+            # 간단한 텍스트 검색 (contains)
+            results = collection.get(where_document={"$contains": query}, limit=5)
+            if not results['ids']:
+                print("❌ 검색 결과가 없습니다.")
+            else:
+                print(f"✅ {len(results['ids'])}개 문서 발견:")
+                for i, doc in enumerate(results['documents']):
+                    meta = results['metadatas'][i]
+                    print(f"[{i+1}] {meta.get('source_file')} (ID: {meta.get('standard_id')})")
+                    print(f"    {doc[:100]}...\n")
             return
 
         # 한국어 데이터 샘플링
@@ -37,4 +51,5 @@ def check():
         print(f"오류: {e}")
 
 if __name__ == "__main__":
-    check()
+    query = sys.argv[1] if len(sys.argv) > 1 else None
+    check(query)

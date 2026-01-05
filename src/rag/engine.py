@@ -16,6 +16,7 @@ from src.core.config import settings
 from src.core.logging import logger
 from src.ingestion.pipeline import IngestionPipeline
 from src.rag.vectorstore import VectorStoreManager
+from src.rag.graph import RAGGraph
 
 
 class DummyRetriever(BaseRetriever):
@@ -102,6 +103,9 @@ class RAGEngine:
         self.bm25_retriever: Optional[BM25Retriever] = None
         self.is_initialized: bool = False
         self.initialization_lock = asyncio.Lock()
+        
+        # 5. LangGraph 워크플로우 초기화 (self를 전달하여 엔진 기능 공유)
+        self.graph = RAGGraph(self)
         
         # 백그라운드 초기화 작업 시작
         self.initialization_task: Coroutine = self._initialize_retrievers()
@@ -238,29 +242,38 @@ class RAGEngine:
         사용자 쿼리를 변환하여 검색 최적화를 수행합니다.
 
         이 메서드는 "쿼리 확장(Query Expansion)" 단계로 동작합니다.
-        LLM을 사용하여 사용자의 질문(특히 한국어 기술 용어)을 영어 키워드로 변환하고,
-        이를 원본 쿼리에 추가하여 검색 정확도를 높입니다.
+        LLM을 사용하여 다음을 수행합니다:
+        1. 한국어 기술 용어 -> 영어 키워드 변환 (Global Regulation 검색용)
+        2. 한국어 동의어 및 띄어쓰기 변형 생성 (한국어 검색 정확도 향상용)
 
         Args:
             original_query (str): 사용자의 원본 질문.
 
         Returns:
-            str: 확장된 쿼리 문자열 (원본 + 영어 키워드).
+            str: 확장된 쿼리 문자열.
         """
         try:
             prompt = ChatPromptTemplate.from_template(
                 """
-                Translate the technical terms in the user's question into English keywords.
-                Output ONLY the English keywords separated by spaces.
+                You are an expert in Automotive Safety Regulations (FMVSS, KMVSS, ECE).
+                Your task is to expand the user's search query to improve retrieval recall.
+
+                Please generate:
+                1. **English Keywords**: Translate technical terms into English (for FMVSS/ECE).
+                2. **Korean Variations**: Generate synonyms, spacing variations, and related terms for Korean keywords (for KMVSS).
+                   - Example: "보행자보호" -> "보행자 보호", "보행자안전"
+                   - Example: "방향지시등" -> "방향 지시등", "턴 시그널"
+
+                Output ONLY the additional keywords separated by spaces. Do not repeat the original query.
 
                 User Question: {question}
-                English Keywords:"""
+                Expanded Keywords:"""
             )
             chain = prompt | self.llm | StrOutputParser()
-            english_keywords = await chain.ainvoke({"question": original_query})
+            expanded_keywords = await chain.ainvoke({"question": original_query})
             
-            # 원본 쿼리와 추출된 키워드 결합
-            final_query = f"{original_query} {english_keywords.strip()}"
+            # 원본 쿼리와 확장된 키워드 결합
+            final_query = f"{original_query} {expanded_keywords.strip()}"
             logger.info(f"🔥 [쿼리 확장] 최종: '{final_query}'")
             return final_query
         except Exception as e:
@@ -270,14 +283,7 @@ class RAGEngine:
     async def chat(self, user_question: str) -> str:
         """
         RAG 파이프라인의 메인 진입점입니다.
-
-        실행 단계:
-        1. 초기화 대기 (필요 시).
-        2. 쿼리 변환 (번역/확장).
-        3. 하이브리드 검색 수행 (BM25 + Vector).
-        4. 검색 결과 중복 제거.
-        5. 재순위화 (FlashRank Cross-Encoder 사용).
-        6. 답변 생성 (LLM, 출처 포함).
+        LangGraph 워크플로우를 실행하여 답변을 생성합니다.
 
         Args:
             user_question (str): 사용자의 질문.
@@ -289,92 +295,12 @@ class RAGEngine:
             if not self.is_initialized:
                 await self.initialization_task
 
-        # 1. 쿼리 변환
-        optimized_query = await self.transform_query(user_question)
-        logger.info(f"🔍 [검색] 원본: '{user_question}' -> 변환됨: '{optimized_query}'")
-
-        # 2. 하이브리드 검색
-        retrievers = self.get_retrievers(use_mmr=True)
-        
-        # 모든 검색기에서 병렬로 문서 검색
-        tasks = [retriever.ainvoke(optimized_query) for retriever in retrievers]
-        results = await asyncio.gather(*tasks)
-        
-        # 결과 통합 및 중복 제거
-        unique_docs: Dict[str, Document] = {}
-        for doc_list in results:
-            for doc in doc_list:
-                if doc.page_content not in unique_docs:
-                    unique_docs[doc.page_content] = doc
-        
-        retrieved_docs = list(unique_docs.values())
-
-        if not retrieved_docs:
-            return "죄송합니다. 관련 규정을 찾을 수 없습니다. 검색어를 변경하거나 데이터베이스를 확인해 주세요."
-
-        # 3. FlashRank를 이용한 재순위화 (Reranking)
-        if self.reranker:
-            passages = [
-                {"id": i, "text": doc.page_content, "meta": doc.metadata}
-                for i, doc in enumerate(retrieved_docs)
-            ]
-            
-            logger.info(f"🧠 {len(passages)}개 문서에 대해 FlashRank 재순위화 수행 중...")
-            rerank_request = RerankRequest(query=user_question, passages=passages)
-            reranked_passages = await asyncio.to_thread(
-                self.reranker.rerank, rerank_request
-            )
-            
-            # LangChain Document 형식으로 변환 및 상위 K개 추출
-            reranked_docs = [
-                Document(page_content=p["text"], metadata=p["meta"])
-                for p in reranked_passages
-            ][:settings.RETRIEVER_K]
-            logger.info(f"✨ 재순위화 완료. 상위 {len(reranked_docs)}개 문서 선택됨.")
-            final_docs = reranked_docs
-        else:
-            logger.warning("⚠️ Reranker를 사용할 수 없습니다. 재순위화 단계를 건너뜁니다.")
-            final_docs = retrieved_docs[:settings.RETRIEVER_K]
-
-
-        if not final_docs:
-            return "죄송합니다. 재순위화 후 적절한 관련 규정을 찾지 못했습니다."
-
-
-        # 4. 답변 생성 (프롬프트 엔지니어링)
-        template = """
-        You are an expert in Automotive Safety Regulations.
-        Based on the provided [Context], write an accurate and professional answer to the [Question].
-
-        [Answer Guidelines]
-        1. **Fact-Based:** Use only the information contained in the [Context]. Do not use external knowledge or speculation.
-        2. **Handle Unknowns:** If the answer is not in the [Context], honestly state, "I could not find the relevant information in the provided documents."
-        3. **Accuracy:** Quote numerical values (voltage, length, angle, etc.) and table data exactly as they appear.
-        4. **Cite Sources:** At the end of your answer, you MUST cite the regulation ID or section number that is the basis for your answer. (e.g., [Source: FMVSS 108 S7.3])
-        5. **Language:** Respond politely and clearly in Korean.
-
-        [Context]
-        {context}
-
-        [Question]
-        {question}
-
-        [Answer]
-        """
-
-        def format_docs(docs: List[Document]) -> str:
-            return "\n\n".join(
-                f"--- Document Start ({d.metadata.get('standard_id', 'Unknown')}) ---\n{d.page_content}\n--- Document End ---"
-                for d in docs
-            )
-
-        chain = ChatPromptTemplate.from_template(template) | self.llm | StrOutputParser()
-        context_text = format_docs(final_docs)
-        response = await chain.ainvoke(
-            {"context": context_text, "question": user_question}
-        )
-
-        return response
+        # LangGraph 실행
+        try:
+            return await self.graph.run(user_question)
+        except Exception as e:
+            logger.error(f"LangGraph 실행 오류: {e}", exc_info=True)
+            return "죄송합니다. 시스템 오류가 발생하여 답변을 생성할 수 없습니다."
 
     async def run_pipeline(self, force_refresh: bool = False) -> str:
         """
