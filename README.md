@@ -74,7 +74,7 @@ graph TD
 ## 🛠️ 기술 스택 (Tech Stack)
 
 -   **언어**: Python 3.10+
--   **LLM**: Google Gemini 1.5 (via `langchain-google-genai`)
+-   **LLM**: Google Gemini 2.5 (via `langchain-google-genai`)
 -   **프레임워크**: LangChain
 -   **벡터 저장소**: ChromaDB (Local)
 -   **임베딩**: HuggingFace (`sentence-transformers`)
@@ -118,8 +118,8 @@ graph TD
     ```ini
     GOOGLE_API_KEY=your_google_api_key_here
     # 선택 사항 (기본값 사용 시 생략 가능)
-    LLM_MODEL_NAME=gemini-1.5-flash
-    EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+    LLM_MODEL_NAME=gemini-2.5-flash
+    EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
     ```
 
 ## 💻 사용법 (Usage)
