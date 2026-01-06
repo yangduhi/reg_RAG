@@ -41,36 +41,92 @@
 
 이 프로젝트는 **LangGraph**를 활용하여 유연하고 확장 가능한 워크플로우를 구현했습니다.
 
-### Workflow Diagram
-`질문 입력` -> `질의 변환` -> `검색(BM25+Vector)` -> `재순위화(Ko/En 분리)` -> `적합성 평가` -> `답변 생성`
-
-1.  **Input Parsing**: PDF/XML 형태의 규정 문서를 파싱하고 의미 단위로 청킹(Chunking)합니다.
-2.  **Indexing**: `Multilingual MiniLM` 모델로 임베딩하여 ChromaDB에 저장하고, BM25 인덱스를 생성합니다.
-3.  **Graph Execution**:
-    *   **Transform Query**: 사용자 질문을 분석하여 한국어(상세 검색용)와 영어(번역 검색용) 쿼리를 생성합니다.
-    *   **Retrieve**: 다국어 쿼리로 병렬 검색을 수행합니다.
-    *   **Rerank**: 언어별 특성에 맞는 전략으로 문서를 정렬합니다.
-    *   **Grade**: LLM이 문서의 유용성을 평가합니다.
-    *   **Generate**: `Gemini 2.0 Flash` 모델이 최종 답변을 작성합니다.
-
-### Simplified Web Search Workflow
-(요청하신 웹 검색 기반의 단순화된 워크플로우 시각화)
+### Workflow Diagram (System Architecture)
 
 ```mermaid
-graph LR
-    A[Query] --> B[Web Search]
-    B --> C{Results Found?}
-    C -- Yes --> D[Document Rerank]
-    C -- No --> B
-    D --> E[LLM Generation]
-    E --> F[Answer]
-    
-    style A fill:#E1F5FE,stroke:#0277BD
-    style B fill:#E1F5FE,stroke:#0277BD
-    style C fill:#FFF9C4,stroke:#FBC02D
-    style D fill:#E1F5FE,stroke:#0277BD
-    style E fill:#E1F5FE,stroke:#0277BD
-    style F fill:#E1F5FE,stroke:#0277BD
+graph TD
+    %% 1. 데이터 수집 및 가공 단계 (Data Ingestion)
+    subgraph Ingestion [1. 데이터 수집 및 가공 (Data Ingestion)]
+        style Ingestion fill:#e3f2fd,stroke:#90caf9,color:#1565c0
+        RawData[("📂 원시 데이터<br>(PDF/XML)")]:::white
+        Parsing["⚙️ 파싱 및 정제<br>(LXML/PDFPlumber)"]:::blue
+        Chunking["🧩 의미 기반 청킹"]:::blue
+        Embedding["🔤 임베딩<br>(Multilingual MiniLM)"]:::blue
+        VectorDB[("🛢️ 벡터 DB<br>(ChromaDB)")]:::darkblue
+        Metadata[("📝 메타데이터<br>레지스트리")]:::yellow
+
+        RawData --> Parsing
+        Parsing --> Chunking
+        Parsing --> Metadata
+        Chunking --> Embedding
+        Embedding --> VectorDB
+    end
+
+    %% 2. 질의 처리 단계 (Query Processing)
+    subgraph QueryProc [2. 질의 분석 및 확장 (Query Processing)]
+        style QueryProc fill:#e8f5e9,stroke:#a5d6a7,color:#2e7d32
+        UserQuery(("👤 사용자 질문")):::white
+        Transform["🔄 질의 변환<br>(LLM 분석)"]:::green
+        MultiQuery["📑 멀티 쿼리 생성<br>(KR/EN/Keyword)"]:::white
+
+        UserQuery --> Transform
+        Transform --> MultiQuery
+    end
+
+    %% 3. 검색 및 순위화 단계 (Retrieval & Ranking)
+    subgraph Retrieval [3. 하이브리드 검색 및 재순위화 (Retrieval & Ranking)]
+        style Retrieval fill:#f3e5f5,stroke:#ce93d8,color:#6a1b9a
+        HybridSearch["🔍 하이브리드 검색<br>(BM25 + Vector)"]:::purple
+        Rerank_Split{"언어별 분기"}:::diamond
+        
+        subgraph RerankLogic [이원화된 재순위화 로직 (Dual Strategy)]
+            style RerankLogic fill:#ffffff,stroke:#9575cd
+            Rerank_En["🇺🇸 영어: FlashRank<br>(정밀도 향상)"]:::purple
+            Rerank_Ko["🇰🇷 한국어: 순위 유지<br>(왜곡 방지)"]:::purple
+        end
+
+        Interleave["🔀 교차 병합<br>(1:1 비율)"]:::darkpurple
+        Grade["⚖️ 적합성 평가<br>(LLM 검증)"]:::darkpurple
+
+        MultiQuery --> HybridSearch
+        VectorDB -.-> HybridSearch
+        HybridSearch --> Rerank_Split
+        Rerank_Split --> Rerank_En
+        Rerank_Split --> Rerank_Ko
+        Rerank_En --> Interleave
+        Rerank_Ko --> Interleave
+        Interleave --> Grade
+    end
+
+    %% 4. 답변 생성 단계 (Generation)
+    subgraph Generation [4. 답변 생성 및 검증 (Generation)]
+        style Generation fill:#e0f7fa,stroke:#80deea,color:#00838f
+        Context["📄 최적 문맥 구성"]:::white
+        Generator["🤖 답변 생성<br>(Gemini 2.0 Flash)"]:::cyan
+        Citations["📌 출처 표기 강제"]:::cyan
+        FinalAnswer[("💬 최종 답변")]:::darkcyan
+
+        Grade --> Context
+        Context --> Generator
+        UserQuery -.-> Generator
+        Generator --> Citations
+        Citations --> FinalAnswer
+    end
+
+    %% 피드백 루프 (Feedback Loop)
+    Grade -.->|❌ 관련 문서 없음 (Retry)| Transform
+
+    %% 스타일 정의 (Styling)
+    classDef white fill:#ffffff,stroke:#333,stroke-width:1px;
+    classDef blue fill:#bbdefb,stroke:#90caf9,color:#000;
+    classDef darkblue fill:#90caf9,stroke:#1565c0,color:#fff;
+    classDef yellow fill:#fff9c4,stroke:#fbc02d,color:#000;
+    classDef green fill:#c8e6c9,stroke:#a5d6a7,color:#000;
+    classDef purple fill:#e1bee7,stroke:#ce93d8,color:#000;
+    classDef diamond fill:#d1c4e9,stroke:#9575cd,color:#000;
+    classDef darkpurple fill:#ba68c8,stroke:#8e24aa,color:#fff;
+    classDef cyan fill:#b2ebf2,stroke:#4dd0e1,color:#000;
+    classDef darkcyan fill:#00acc1,stroke:#00838f,color:#fff;
 ```
 
 ---
