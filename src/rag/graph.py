@@ -110,11 +110,20 @@ class RAGGraph:
             if "FMVSS" not in search_regions and "ECE" not in search_regions:
                 region_instruction += " DO NOT generate English queries for FMVSS/ECE."
         
+        # [Auto-Mapping] 메타데이터 기반 규정 자동 매칭
+        # 질문에 포함된 키워드(예: '천정')로 실제 규정 제목(예: '천정구조')을 찾아냅니다.
+        related_standards = self.engine.find_related_standards(question)
+        mapping_context = ""
+        if related_standards:
+            mapping_context = f"\n\n**Found Related Regulations (Auto-Detected):**\n- {', '.join(related_standards)}\n(Consider these IDs in your query generation)"
+            logger.info(f"--- [Graph: Transform] 자동 매칭된 규정: {related_standards} ---")
+
         prompt = ChatPromptTemplate.from_template(
             """
             You are an expert in Automotive Safety Regulations (FMVSS, KMVSS, ECE).
             Your task is to generate search queries to retrieve relevant documents.
             {region_instruction}
+            {mapping_context}
 
             **Conversation History:**
             {history}
@@ -123,7 +132,6 @@ class RAGGraph:
             
             **Instructions:**
             1. **Analyze:** specific topics (e.g., "head injury", "braking", "seatbelt").
-               - *Mapping Hint:* "Roof Crush" -> "FMVSS 216", "KMVSS 92" (천정구조).
             2. **Translate & Expand (Conditional):**
                - **Query 1 (Korean):** Optimized for KMVSS. Use specific Korean technical terms. **MANDATORY: Append "충격시험방법" (Test Procedure) and "HIC" (if head injury).** (Only if KMVSS is targeted)
                - **Query 2 (English):** Optimized for ECE/FMVSS. **TRANSLATE** technical terms. **CRITICAL: If "US/America" is mentioned, include "FMVSS". If "Europe" is mentioned, include "ECE".** (Only if ECE/FMVSS are targeted)
@@ -141,7 +149,8 @@ class RAGGraph:
             response = await chain.ainvoke({
                 "history": history_str, 
                 "question": question,
-                "region_instruction": region_instruction
+                "region_instruction": region_instruction,
+                "mapping_context": mapping_context
             })
             # 라인 단위 분리 및 빈 줄 제거
             queries = [q.strip() for q in response.split("\n") if q.strip()]
@@ -151,7 +160,14 @@ class RAGGraph:
         except Exception as e:
             logger.error(f"Transform Query Error: {e}")
             queries = [question]
-            
+        
+        # [강제 주입] 자동 매칭된 규정 ID를 쿼리에 추가 (검색 보장)
+        for std in related_standards:
+            # "KMVSS 92 (천정구조)" -> "KMVSS 92" 부분만 추출하여 검색어로 추가
+            std_id = std.split("(")[0].strip()
+            if std_id not in queries:
+                queries.append(std_id)
+
         # 원본 질문이 포함되지 않았으면 추가 (선택사항, 하지만 검색 범위 확장을 위해 좋음)
         if question not in queries:
             queries.append(question)

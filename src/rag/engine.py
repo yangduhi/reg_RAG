@@ -271,6 +271,38 @@ class RAGEngine:
             return int(nums[0]) if nums else 9999
         return sorted(list(set(ids)), key=sort_key)
 
+    def find_related_standards(self, query: str) -> List[str]:
+        """
+        [메타데이터 검색] 사용자 질문 키워드와 일치하는 규정 제목 검색
+        
+        LLM이 놓칠 수 있는 정확한 규정 명칭을 찾아 쿼리에 보강하기 위함입니다.
+        예: "천정 강도" -> "KMVSS 92 (천정구조)" 발견
+        """
+        if not query:
+            return []
+            
+        # 1. 키워드 추출 (2글자 이상)
+        keywords = [k for k in query.split() if len(k) >= 2]
+        if not keywords:
+            return []
+            
+        candidates = []
+        # 2. 메타데이터 순회
+        for std_id, meta in self.metadata_cache.items():
+            title = meta.get("title", "")
+            if not title: 
+                continue
+                
+            # 3. 매칭 확인 (대소문자 무시)
+            for k in keywords:
+                if k.lower() in title.lower():
+                    # 너무 일반적인 단어 제외 (예: 기준, 자동차 등은 제외하면 좋겠지만 일단 단순 포함)
+                    candidates.append(f"{std_id} ({title})")
+                    break
+        
+        # 4. 결과 제한 (최대 5개)
+        return list(set(candidates))[:5]
+
     def _load_all_metadata(self) -> Dict[str, dict]:
         """여러 소스(JSON)에서 메타데이터를 로드하여 통합"""
         merged = {}
