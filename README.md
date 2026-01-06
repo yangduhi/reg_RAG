@@ -114,7 +114,7 @@ graph TD
     end
 
     %% 피드백 루프 (Feedback Loop)
-    Grade -.->|❌ 관련 문서 없음 (Retry)| Transform
+    Grade -.->|"❌ 관련 문서 없음 (Retry)"| Transform
 
     %% 스타일 정의 (Styling)
     classDef white fill:#ffffff,stroke:#333,stroke-width:1px;
