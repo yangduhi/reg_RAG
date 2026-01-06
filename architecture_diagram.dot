@@ -1,0 +1,115 @@
+digraph RAG_System_Architecture {
+    // --- 기본 설정 (Basic Settings) ---
+    // 방향: 왼쪽에서 오른쪽 (Left to Right)
+    rankdir=LR;
+    // 엣지 스타일: 직각 (Orthogonal)
+    splines=ortho;
+    // 노드 스타일 설정 (나눔고딕 폰트 사용, 둥근 모서리 박스)
+    node [shape=box, style="filled,rounded", fontname="NanumGothic", fontsize=11, height=0.6];
+    edge [fontname="NanumGothic", fontsize=10, color="#555555"];
+
+    // --- 서브그래프: 클러스터 (Clusters) ---
+
+    // 1. 데이터 수집 및 가공 단계
+    subgraph cluster_input {
+        label = "1. 데이터 수집 및 가공 (Data Ingestion & Processing)\n[규정 문서의 구조화 및 벡터화]";
+        style = dashed;
+        color = "#90caf9"; // Light Blue border
+        bgcolor = "#e3f2fd"; // Very Light Blue bg
+        fontcolor = "#1565c0";
+
+        RawData [label="원시 데이터\n(Raw Data)\n[PDF/XML 규정 문서]", shape=folder, fillcolor="#ffffff", penwidth=2];
+        Parsing [label="파싱 및 정제\n(Parsing)\n[LXML/PDFPlumber 활용\n텍스트/표 추출]", fillcolor="#bbdefb"];
+        Chunking [label="의미 기반 청킹\n(Semantic Chunking)\n[문맥 유지 분할]", fillcolor="#bbdefb"];
+        Embedding [label="임베딩\n(Embedding)\n[다국어 MiniLM 모델]", fillcolor="#bbdefb"];
+        VectorDB [label="벡터 데이터베이스\n(Vector DB)\n[ChromaDB 저장]", shape=cylinder, fillcolor="#90caf9"];
+        Metadata [label="메타데이터 레지스트리\n(Metadata Registry)\n[규정 ID, 출처, 제목]", shape=note, fillcolor="#fff9c4"];
+    }
+
+    // 2. 질의 처리 단계 (LangGraph)
+    subgraph cluster_query {
+        label = "2. 질의 분석 및 확장 (Query Processing)\n[사용자 의도 파악 및 다국어 검색어 생성]";
+        style = dashed;
+        color = "#a5d6a7"; // Light Green border
+        bgcolor = "#e8f5e9"; // Very Light Green bg
+        fontcolor = "#2e7d32";
+
+        UserQuery [label="사용자 질문\n(User Query)\n[Streamlit UI 입력]", shape=ellipse, fillcolor="#ffffff", penwidth=2];
+        Transform [label="질의 변환\n(Query Transform)\n[LLM 기반 분석]", fillcolor="#c8e6c9"];
+        MultiQuery [label="멀티 쿼리 생성\n(Multi-Queries)\n[1. 한국어 (별표/시험방법)\n2. 영어 (ECE/FMVSS)\n3. 키워드 ID]", shape=note, style=dashed, fillcolor="#ffffff"];
+    }
+
+    // 3. 검색 및 순위화 단계 (핵심 엔진)
+    subgraph cluster_retrieval {
+        label = "3. 하이브리드 검색 및 언어별 재순위화 (Retrieval & Ranking)\n[언어 편향 제거를 위한 이원화 전략]";
+        style = dashed;
+        color = "#ce93d8"; // Light Purple border
+        bgcolor = "#f3e5f5"; // Very Light Purple bg
+        fontcolor = "#6a1b9a";
+
+        HybridSearch [label="하이브리드 검색\n(Hybrid Search)\n[BM25(키워드) + Vector(의미)]\nTop-K 문서 확보", fillcolor="#e1bee7"];
+        Rerank_Split [label="언어별 분기\n(Split by Language)", shape=diamond, fillcolor="#d1c4e9"];
+        
+        subgraph cluster_rerank_logic {
+            label = "이원화된 재순위화 로직 (Dual Strategy)";
+            style = solid;
+            color = "#9575cd";
+            bgcolor = "#ffffff";
+            
+            Rerank_En [label="영어 문서 재순위화\n(English Reranking)\n[FlashRank (ms-marco) 적용\n정밀도 향상]", fillcolor="#d1c4e9"];
+            Rerank_Ko [label="한국어 문서 순위 유지\n(Korean Keep-Order)\n[Reranker 모델 왜곡 방지\n검색 점수 신뢰]", fillcolor="#d1c4e9"];
+        }
+
+        Interleave [label="교차 병합\n(Interleaving)\n[1:1 비율 병합으로\n언어 균형 확보]", fillcolor="#ba68c8", fontcolor=white];
+        Grade [label="적합성 평가\n(Relevance Grading)\n[LLM이 질문과의\n관련성 최종 검증]", fillcolor="#8e24aa", fontcolor=white];
+    }
+
+    // 4. 답변 생성 단계
+    subgraph cluster_generation {
+        label = "4. 답변 생성 및 검증 (Generation & Reliability)\n[근거 기반의 신뢰성 있는 답변]";
+        style = dashed;
+        color = "#80deea"; // Light Cyan border
+        bgcolor = "#e0f7fa"; // Very Light Cyan bg
+        fontcolor = "#00838f";
+
+        Context [label="최적 문맥 구성\n(Context Window)\n[검증된 Top-N 문서]", shape=note, fillcolor="#ffffff"];
+        Generator [label="답변 생성\n(Answer Generation)\n[Gemini 2.0 Flash\n비교 분석 및 요약]", fillcolor="#b2ebf2"];
+        Citations [label="출처 표기 강제\n(Citation Injection)\n[[Source: 규정ID] 명시]", fillcolor="#80deea"];
+        FinalAnswer [label="최종 답변\n(Final Answer)\n[Streamlit 출력]", shape=component, fillcolor="#00acc1", fontcolor=white];
+    }
+
+    // --- 연결 (Connections) ---
+    
+    // 데이터 파이프라인
+    RawData -> Parsing [label=" 텍스트 추출"];
+    Parsing -> Chunking [label=" 구조화"];
+    Chunking -> Embedding [label=" 벡터화"];
+    Embedding -> VectorDB [label=" 인덱싱"];
+    Parsing -> Metadata [label=" 메타정보 추출"];
+
+    // 검색 파이프라인
+    UserQuery -> Transform [label=" 의도 분석"];
+    Transform -> MultiQuery [label=" 확장"];
+    MultiQuery -> HybridSearch [label=" 병렬 실행\n(Parallel)"];
+    VectorDB -> HybridSearch [label=" 의미 검색"];
+    
+    // 재순위화 파이프라인
+    HybridSearch -> Rerank_Split [label=" 문서 분류"];
+    Rerank_Split -> Rerank_En [label=" 영어 문서"];
+    Rerank_Split -> Rerank_Ko [label=" 한국어 문서"];
+    
+    Rerank_En -> Interleave [label=" 점수화 완료"];
+    Rerank_Ko -> Interleave [label=" 원본 순서"];
+    
+    Interleave -> Grade [label=" 통합 리스트"];
+    Grade -> Context [label=" 적합 문서 필터링"];
+    
+    // 생성 파이프라인
+    Context -> Generator [label=" Context 주입"];
+    UserQuery -> Generator [label=" 질문 주입"];
+    Generator -> Citations [label=" 근거 부착"];
+    Citations -> FinalAnswer [label=" 완료"];
+
+    // 피드백 루프 (신뢰성 향상)
+    Grade -> Transform [label=" 관련 문서 없을 시\n자동 재검색 (Retry)", style=dotted, color="#d32f2f", fontcolor="#d32f2f", penwidth=2];
+}

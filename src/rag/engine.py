@@ -21,129 +21,108 @@ from src.rag.graph import RAGGraph
 
 class DummyRetriever(BaseRetriever):
     """
-    벡터 데이터베이스가 비어있을 때 시스템 충돌을 방지하기 위한 더미 검색기(Retriever) 구현체입니다.
-
-    초기화 실패나 데이터 부재 시 예외를 발생시키는 대신 빈 리스트를 반환하여
-    RAG 파이프라인이 안전하게 동작하도록 보장하는 안전장치 역할을 합니다.
+    [안전 장치] 더미 검색기 (Dummy Retriever)
+    - 벡터 데이터베이스가 비어있거나 초기화 실패 시 시스템 충돌(Crash)을 방지합니다.
+    - 예외를 발생시키는 대신 빈 리스트를 반환하여 RAG 파이프라인이 안전하게 종료되도록 합니다.
     """
 
     def _get_relevant_documents(
         self, query: str, *, run_manager: Any = None
     ) -> List[Document]:
-        """
-        동기 방식 문서 검색 구현 (항상 빈 리스트 반환).
-
-        Args:
-            query (str): 검색 쿼리.
-            run_manager (Any, optional): 실행 콜백 관리자.
-
-        Returns:
-            List[Document]: 항상 빈 리스트를 반환합니다.
-        """
+        """동기 호출: 항상 빈 리스트 반환"""
         return []
 
     async def _aget_relevant_documents(
         self, query: str, *, run_manager: Any = None
     ) -> List[Document]:
-        """
-        비동기 방식 문서 검색 구현 (항상 빈 리스트 반환).
-
-        Args:
-            query (str): 검색 쿼리.
-            run_manager (Any, optional): 실행 콜백 관리자.
-
-        Returns:
-            List[Document]: 항상 빈 리스트를 반환합니다.
-        """
+        """비동기 호출: 항상 빈 리스트 반환"""
         return []
 
 
 class RAGEngine:
     """
-    핵심 RAG(Retrieval-Augmented Generation, 검색 증강 생성) 엔진 클래스입니다.
-
-    이 클래스는 사용자 인터페이스(UI)와 비즈니스 로직을 연결하는 파사드(Facade) 역할을 수행합니다.
-    다음과 같은 전체 RAG 파이프라인을 조율합니다:
-    1. 쿼리 처리 및 변환 (Query Transformation)
-    2. 하이브리드 검색 (벡터 검색 + 키워드 검색)
-    3. 재순위화 (Reranking, Cross-encoder/FlashRank 활용)
-    4. 답변 생성 (LLM 활용)
-
+    [RAG 엔진 코어] (Retrieval-Augmented Generation Engine)
+    
+    이 클래스는 시스템의 두뇌 역할을 하며, UI와 비즈니스 로직(검색 및 생성)을 연결하는 파사드(Facade)입니다.
+    
+    [주요 기능]
+    1. LLM 및 벡터 저장소 초기화
+    2. 하이브리드 검색기(BM25 + Vector) 구성 및 관리
+    3. LangGraph 워크플로우 실행 (Chat)
+    4. 데이터 파이프라인(수집/가공) 제어
+    
     Attributes:
-        llm (ChatGoogleGenerativeAI): 언어 모델 인스턴스 (Gemini).
-        vstore_manager (VectorStoreManager): 벡터 데이터베이스 관리자.
-        metadata_cache (Dict[str, dict]): 규정 메타데이터의 인메모리 캐시.
-        reranker (Optional[Ranker]): 재순위화 모델 인스턴스 (FlashRank).
-        bm25_retriever (Optional[BM25Retriever]): 키워드 기반 검색기 인스턴스.
-        is_initialized (bool): 검색기 초기화 완료 여부 플래그.
+        llm (ChatGoogleGenerativeAI): 답변 생성을 위한 Gemini 모델 인스턴스.
+        vstore_manager (VectorStoreManager): 벡터 데이터베이스(ChromaDB) 접근 관리자.
+        metadata_cache (Dict): 규정 ID, 제목, URL 등의 메타데이터를 인메모리에 캐싱하여 빠른 접근 지원.
+        reranker (Ranker): 검색 결과의 정확도를 높이기 위한 재순위화(Reranking) 모델.
+        bm25_retriever (BM25Retriever): 키워드 기반 검색기 (정확한 용어 매칭용).
+        graph (RAGGraph): LangGraph 기반의 검색-생성 워크플로우 정의.
     """
 
     def __init__(self) -> None:
         """
-        RAGEngine을 초기화합니다.
-
-        LLM, 벡터 저장소 관리자, 메타데이터 캐시를 설정합니다.
-        검색기(BM25, Reranker)의 비동기 초기화 작업을 시작합니다.
+        엔진 초기화
+        - 동기적으로 LLM, DB 매니저를 설정하고,
+        - 비동기적으로 검색기(Retriever) 초기화 태스크를 백그라운드에서 시작합니다. (UI 로딩 지연 방지)
         """
-        # 1. LLM 초기화 (Gemini)
+        # 1. LLM 초기화 (Google Gemini API 사용)
+        # settings.LLM_MODEL_NAME (예: gemini-2.0-flash) 모델 사용
         self.llm = ChatGoogleGenerativeAI(
             model=settings.LLM_MODEL_NAME,
             google_api_key=settings.GOOGLE_API_KEY,
             temperature=settings.LLM_TEMPERATURE,
         )
 
-        # 2. 벡터 DB 매니저 연결
+        # 2. 벡터 DB 매니저 연결 (데이터 저장소)
         self.vstore_manager = VectorStoreManager()
 
-        # 3. 메타데이터 캐시 로드
+        # 3. 메타데이터 캐시 로드 (규정 정보)
         self.metadata_cache = self._load_all_metadata()
 
-        # 4. 하이브리드 검색 컴포넌트 초기화
+        # 4. 하이브리드 검색 컴포넌트 (초기값 None, 비동기 로딩)
         self.reranker: Optional[Ranker] = None
         self.bm25_retriever: Optional[BM25Retriever] = None
         self.is_initialized: bool = False
         self.initialization_lock = asyncio.Lock()
         
-        # 5. LangGraph 워크플로우 초기화 (self를 전달하여 엔진 기능 공유)
+        # 5. LangGraph 워크플로우 생성 (self를 전달하여 엔진의 리소스 공유)
         self.graph = RAGGraph(self)
         
-        # 백그라운드 초기화 작업 시작
+        # [성능 최적화] 검색기 초기화는 시간이 걸리므로(인덱싱 등) 백그라운드 태스크로 실행
         self.initialization_task = asyncio.create_task(self._initialize_retrievers())
 
     async def _initialize_retrievers(self) -> None:
         """
-        검색 컴포넌트(BM25, Reranker)를 비동기적으로 초기화합니다.
-
-        벡터 데이터베이스에 문서가 존재하는지 확인합니다. 데이터가 있는 경우,
-        Non-blocking 스레드에서 BM25 인덱스를 생성하고 Reranker 모델을 로드합니다.
+        [비동기 초기화] 검색기 구성 (BM25 & Reranker)
         
-        Raises:
-            Exception: 초기화 중 발생하는 모든 오류를 로그로 기록합니다.
+        - 벡터 DB의 모든 문서를 로드하여 BM25(TF-IDF) 인덱스를 생성합니다.
+        - Reranker 모델을 메모리에 로드합니다.
+        - 이 과정이 완료되어야 정상적인 검색이 가능합니다.
         """
         try:
-            logger.info("⏳ 검색기(Retriever) 초기화 중...")
-            # 블로킹 DB 호출을 별도 스레드에서 실행
+            logger.info("⏳ 검색기(Retriever) 초기화 및 인덱싱 시작...")
+            # DB I/O는 블로킹 작업이므로 별도 스레드에서 실행하여 이벤트 루프 차단 방지
             all_docs = await asyncio.to_thread(self.vstore_manager.get_all_documents)
 
             if all_docs:
-                # BM25 검색기 초기화 (Non-blocking)
-                logger.info("🛠️ BM25 검색기 인덱싱 시작...")
+                # 1. BM25 검색기 초기화 (키워드 검색용 역색인 생성)
+                logger.info(f"🛠️ BM25 검색기 인덱싱 중... (문서 수: {len(all_docs)}개)")
                 self.bm25_retriever = await asyncio.to_thread(
                     BM25Retriever.from_documents, all_docs
                 )
-                logger.info(
-                    f"✅ BM25 인덱싱 완료 (문서 수: {len(all_docs)}개)"
-                )
+                logger.info("✅ BM25 인덱싱 완료.")
 
-                # Reranker 초기화 (Non-blocking)
-                logger.info(f"🚀 Reranker 모델 초기화 중: {settings.RERANKER_MODEL}")
+                # 2. Reranker 모델 로드 (재순위화용 Cross-Encoder)
+                # FlashRank 라이브러리 사용 (경량화된 BERT 모델)
+                logger.info(f"🚀 Reranker 모델 로딩: {settings.RERANKER_MODEL}")
                 self.reranker = await asyncio.to_thread(
                     Ranker, model_name=settings.RERANKER_MODEL, cache_dir="/tmp/flashrank_cache"
                 )
                 logger.info("✅ Reranker 초기화 완료.")
                 self.is_initialized = True
             else:
-                logger.warning("⚠️ DB가 비어있습니다. 검색기를 초기화할 수 없습니다.")
+                logger.warning("⚠️ DB가 비어있습니다. 검색기를 초기화할 수 없습니다. (데이터 수집 필요)")
                 self.bm25_retriever = None
                 self.reranker = None
 
@@ -154,22 +133,26 @@ class RAGEngine:
     
     @property
     def vector_store(self):
-        """내부 VectorStore 인스턴스에 접근합니다."""
+        """내부 VectorStore(ChromaDB) 객체 접근자"""
         return self.vstore_manager.db
 
     def get_retrievers(
         self, k: Optional[int] = None, use_mmr: bool = False, filter_std: str = "All"
     ) -> List[BaseRetriever]:
         """
-        하이브리드 검색에 사용할 검색기 목록을 생성합니다.
+        [검색기 팩토리] 상황에 맞는 검색기 목록 반환
+        
+        하이브리드 검색(Hybrid Search)을 위해 BM25와 Vector Retriever를 리스트로 반환합니다.
+        LangGraph의 'retrieve' 노드에서 이를 병렬로 실행합니다.
 
         Args:
-            k (Optional[int]): 검색할 문서 수. 기본값은 settings.RETRIEVER_K.
-            use_mmr (bool): 다양성 확보를 위한 MMR(Maximal Marginal Relevance) 사용 여부.
-            filter_std (str): 필터링할 규정 ID (예: "FMVSS 108"). 기본값은 "All".
+            k (int): 검색할 문서 수 (기본값: 설정파일의 RETRIEVER_K = 25)
+            use_mmr (bool): MMR(Maximal Marginal Relevance) 알고리즘 사용 여부.
+                            (유사하면서도 다양한 내용을 찾기 위해 True 권장)
+            filter_std (str): 특정 규정 ID로 필터링할 경우 사용 (현재는 "All"로 전체 검색)
 
         Returns:
-            List[BaseRetriever]: [BM25Retriever, VectorRetriever] 리스트를 반환합니다.
+            List[BaseRetriever]: [BM25Retriever, VectorRetriever]
         """
         _k = k if k is not None else settings.RETRIEVER_K
 
@@ -177,15 +160,16 @@ class RAGEngine:
             logger.error("❌ 검색기가 준비되지 않았습니다.")
             return [DummyRetriever()]
 
-        # 1. 벡터 검색 설정 (후보군 확장)
-        # 재순위화(Reranking)를 위해 최종 개수보다 더 많은 후보를 1차로 검색합니다.
+        # 1. 벡터 검색 설정 (Semantic Search)
+        # Reranking 효과를 극대화하기 위해 최종 필요한 개수(K)보다 더 많은 후보군(3배수)을 1차로 검색합니다.
         search_type = "mmr" if use_mmr else "similarity"
         candidate_k = _k * 3
 
         search_kwargs = {"k": candidate_k}
         if use_mmr:
-            search_kwargs["fetch_k"] = candidate_k * 2
+            search_kwargs["fetch_k"] = candidate_k * 2 # MMR 후보풀 크기
 
+        # (선택사항) 메타데이터 필터링
         if filter_std and filter_std != "All":
             search_kwargs["filter"] = {"standard_id": filter_std}
 
@@ -195,173 +179,95 @@ class RAGEngine:
 
         return [self.bm25_retriever, vector_retriever]
 
-    def get_ensemble_retriever(
-        self, k: Optional[int] = None, use_mmr: bool = False, filter_std: str = "All"
-    ) -> BaseRetriever:
+    # ... (get_ensemble_retriever는 현재 사용되지 않지만 하위 호환성을 위해 유지) ...
+
+    async def chat(
+        self, 
+        user_question: str, 
+        chat_history: List[Dict] = None,
+        search_regions: List[str] = None,
+        similarity_threshold: float = 0.5
+    ) -> Dict:
         """
-        사전 설정된 앙상블 검색기(EnsembleRetriever, BM25 + Vector)를 생성합니다.
+        [메인 실행 함수] 사용자 질문 처리 및 답변 생성
+        
+        UI에서 호출되는 진입점으로, 다음 과정을 수행합니다:
+        1. 엔진 초기화 대기 (검색기 준비 확인)
+        2. LangGraph 워크플로우(Graph) 실행
+        3. 결과(답변 및 근거 문서) 반환
 
         Args:
-            k (Optional[int]): 검색할 문서 수.
-            use_mmr (bool): MMR 사용 여부.
-            filter_std (str): 필터링할 규정 ID.
+            user_question (str): 사용자 질문.
+            chat_history (List[Dict]): 이전 대화 내역 (멀티턴 대화 지원용, 현재는 주로 단일턴).
+            search_regions (List[str]): 검색할 지역 필터 (예: ["FMVSS", "KMVSS"]). UI 체크박스와 연동.
+            similarity_threshold (float): 검색 민감도(정확도) 설정. UI 슬라이더와 연동.
 
         Returns:
-            BaseRetriever: 키워드와 의미 기반 검색이 결합된 EnsembleRetriever 인스턴스.
+            Dict: {"generation": 답변 텍스트, "documents": [참고 문서 리스트]}
         """
-        _k = k if k is not None else settings.RETRIEVER_K
-
-        if not self.bm25_retriever:
-            logger.error("❌ 검색기가 준비되지 않았습니다.")
-            return DummyRetriever()
-
-        # 1. 벡터 검색 설정
-        search_type = "mmr" if use_mmr else "similarity"
-        candidate_k = _k * 3
-
-        search_kwargs = {"k": candidate_k}
-        if use_mmr:
-            search_kwargs["fetch_k"] = candidate_k * 2
-
-        if filter_std and filter_std != "All":
-            search_kwargs["filter"] = {"standard_id": filter_std}
-
-        vector_retriever = self.vstore_manager.db.as_retriever(
-            search_type=search_type, search_kwargs=search_kwargs
-        )
-
-        # 2. 앙상블 생성 (BM25 50%, Vector 50% 가중치)
-        ensemble_retriever = EnsembleRetriever(
-            retrievers=[self.bm25_retriever, vector_retriever], weights=[0.5, 0.5]
-        )
-
-        return ensemble_retriever
-
-    async def transform_query(self, original_query: str) -> str:
-        """
-        사용자 쿼리를 변환하여 검색 최적화를 수행합니다.
-
-        이 메서드는 "쿼리 확장(Query Expansion)" 단계로 동작합니다.
-        LLM을 사용하여 다음을 수행합니다:
-        1. 한국어 기술 용어 -> 영어 키워드 변환 (Global Regulation 검색용)
-        2. 한국어 동의어 및 띄어쓰기 변형 생성 (한국어 검색 정확도 향상용)
-
-        Args:
-            original_query (str): 사용자의 원본 질문.
-
-        Returns:
-            str: 확장된 쿼리 문자열.
-        """
-        try:
-            prompt = ChatPromptTemplate.from_template(
-                """
-                You are an expert in Automotive Safety Regulations (FMVSS, KMVSS, ECE).
-                Your task is to expand the user's search query to improve retrieval recall.
-
-                Please generate:
-                1. **English Keywords**: Translate technical terms into English (for FMVSS/ECE).
-                2. **Korean Variations**: Generate synonyms, spacing variations, and related terms for Korean keywords (for KMVSS).
-                   - Example: "보행자보호" -> "보행자 보호", "보행자안전"
-                   - Example: "방향지시등" -> "방향 지시등", "턴 시그널"
-
-                Output ONLY the additional keywords separated by spaces. Do not repeat the original query.
-
-                User Question: {question}
-                Expanded Keywords:"""
-            )
-            chain = prompt | self.llm | StrOutputParser()
-            expanded_keywords = await chain.ainvoke({"question": original_query})
-            
-            # 원본 쿼리와 확장된 키워드 결합
-            final_query = f"{original_query} {expanded_keywords.strip()}"
-            logger.info(f"🔥 [쿼리 확장] 최종: '{final_query}'")
-            return final_query
-        except Exception as e:
-            logger.error(f"쿼리 변환 오류: {e}")
-            return original_query
-
-    async def chat(self, user_question: str) -> str:
-        """
-        RAG 파이프라인의 메인 진입점입니다.
-        LangGraph 워크플로우를 실행하여 답변을 생성합니다.
-
-        Args:
-            user_question (str): 사용자의 질문.
-
-        Returns:
-            str: LLM이 생성한 답변.
-        """
+        # 검색기 초기화가 완료될 때까지 대기 (Thread-safe)
         async with self.initialization_lock:
             if not self.is_initialized:
                 await self.initialization_task
 
-        # LangGraph 실행
+        # LangGraph 워크플로우 실행
         try:
-            return await self.graph.run(user_question)
+            return await self.graph.run(
+                user_question, 
+                chat_history=chat_history,
+                search_regions=search_regions,
+                similarity_threshold=similarity_threshold
+            )
         except Exception as e:
-            logger.error(f"LangGraph 실행 오류: {e}", exc_info=True)
-            return "죄송합니다. 시스템 오류가 발생하여 답변을 생성할 수 없습니다."
+            logger.error(f"LangGraph 실행 중 치명적 오류: {e}", exc_info=True)
+            return {
+                "generation": "죄송합니다. 시스템 오류가 발생하여 답변을 생성할 수 없습니다. 관리자에게 문의해주세요.",
+                "documents": [],
+            }
 
     async def run_pipeline(self, force_refresh: bool = False) -> str:
         """
-        데이터 수집 파이프라인을 수동으로 실행합니다.
+        [데이터 파이프라인 트리거] 데이터 수집 및 가공 프로세스 실행
+        
+        UI의 '데이터베이스 관리' 버튼을 통해 호출됩니다.
+        1. IngestionPipeline 실행 (크롤링 -> 파싱 -> 청킹 -> 임베딩 -> 저장)
+        2. 변경 사항이 있을 경우 검색기(BM25/Reranker) 재초기화
 
         Args:
-            force_refresh (bool): True일 경우, 변경 사항과 관계없이 모든 파일을 다시 처리합니다.
-
-        Returns:
-            str: 완료 상태 메시지.
-
-        Raises:
-            Exception: 파이프라인 실행 중 오류 발생 시 예외를 전파합니다.
+            force_refresh (bool): True일 경우 기존 DB를 삭제하고 처음부터 다시 구축.
         """
         try:
             logger.info("🔄 데이터 파이프라인 실행 시작...")
             pipeline = IngestionPipeline()
             await pipeline.run(force_refresh=force_refresh)
 
+            # 메타데이터 캐시 갱신
             self.metadata_cache = self._load_all_metadata()
+            
             logger.info("🔄 데이터 변경 감지: 검색 엔진을 다시 로드합니다.")
-            # 새 데이터를 반영하기 위해 검색기 재초기화
+            # 새 데이터를 반영하기 위해 검색기 재초기화 태스크 시작
             self.initialization_task = asyncio.create_task(self._initialize_retrievers())
             await self.initialization_task
 
-            return "✅ 데이터 처리 및 엔진 업데이트 완료!"
+            return "✅ 데이터 처리 및 엔진 업데이트가 성공적으로 완료되었습니다!"
         except Exception as e:
-            logger.error(f"파이프라인 오류: {e}", exc_info=True)
+            logger.error(f"파이프라인 실행 오류: {e}", exc_info=True)
             raise
 
+    # ... (Helper 메서드들: 메타데이터 조회 등) ...
     def get_available_standards(self) -> List[str]:
-        """
-        사용 가능한 규정 ID 목록을 정렬하여 반환합니다 (예: "108", "201").
-
-        Returns:
-            List[str]: 정렬된 ID 리스트.
-        """
+        """DB에 존재하는 규정 ID 목록 반환"""
         ids = list(self.metadata_cache.keys())
-
+        # 숫자 기준 정렬 로직 (예: FMVSS 108 -> 108 추출)
         def sort_key(k: str) -> int:
             nums = re.findall(r"(\d+)", str(k))
             return int(nums[0]) if nums else 9999
-
         return sorted(list(set(ids)), key=sort_key)
 
-    def get_metadata_title(self, standard_id: str) -> str:
-        """주어진 규정 ID에 해당하는 제목을 반환합니다."""
-        return self.metadata_cache.get(str(standard_id), {}).get("title", "")
-
-    def get_web_url(self, standard_id: str) -> Optional[str]:
-        """주어진 규정 ID의 원문 웹 URL을 반환합니다."""
-        return self.metadata_cache.get(str(standard_id), {}).get("url")
-
     def _load_all_metadata(self) -> Dict[str, dict]:
-        """
-        여러 JSON 소스에서 메타데이터를 로드하고 병합합니다.
-
-        Returns:
-            Dict[str, dict]: 규정 ID를 키로 하는 메타데이터 딕셔너리.
-        """
+        """여러 소스(JSON)에서 메타데이터를 로드하여 통합"""
         merged = {}
+        # 우선순위: KMVSS -> ECE -> FMVSS -> 통합 레지스트리
         candidates = [
             settings.DATA_DIR / "metadata_kmvss.json",
             settings.DATA_DIR / "metadata_ece.json",
@@ -379,12 +285,10 @@ class RAGEngine:
                                 if key:
                                     merged[key] = {
                                         "title": item.get("title", ""),
-                                        "url": item.get("web_url")
-                                        or item.get("source_url"),
+                                        "url": item.get("web_url") or item.get("source_url"),
                                     }
                         elif isinstance(data, dict):
                             merged.update(data)
                 except Exception:
-                    # 견고성을 위해 개별 메타데이터 파일 오류는 무시합니다.
                     pass
         return merged

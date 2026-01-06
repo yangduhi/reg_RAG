@@ -93,6 +93,16 @@ class UniversalXmlLoader(BaseLoader):
             # [5] Content Extraction
             full_text = self._extract_text(soup, is_korean)
 
+            # [KMVSS Metadata Enrichment] 별표(Att) 파일인 경우 관련 조항 정보 추출하여 본문에 추가
+            if is_korean and "Att" in file_path.name:
+                # 제목에서 "(제XX조 관련)" 패턴 찾기
+                related_match = re.search(r"\((제\d+조.*?)\)", title)
+                if related_match:
+                    related_info = related_match.group(1)
+                    # 본문 최상단에 관련 조항 정보 강제 주입 -> 검색 시 '제102조' 검색하면 별표도 걸리게 함
+                    full_text = f"**[관련 조항: {related_info}]**\n\n" + full_text
+                    logger.debug(f"🔗 Linked Attachment {file_path.name} to {related_info}")
+
             if len(full_text.strip()) < 10:
                 logger.warning(f"⚠️ XML content too short ({len(full_text.strip())} chars). Skipping: {file_path.name}")
                 return []
@@ -140,8 +150,74 @@ class UniversalXmlLoader(BaseLoader):
                     texts.append(part)
                 return "\n\n".join(texts)
         
-        # Default for non-Korean or as a fallback
+        # [FMVSS/English XML Support]
+        # FMVSS XML usually has structures like <PART>, <SUBPART>, <SECTION>, <CONTENTS> or just flat text in <reg-text>
+        # Specifically for CFR XML, content is often in <P> tags under a <DIV>
+        
+        # 1. Try generic content tags first
+        content_tag = soup.find(["CONTENTS", "Contents", "reg-text", "SECTION"])
+        if content_tag:
+             return clean_korean_text(content_tag.get_text(separator="\n", strip=True))
+
+        # 2. Try collecting all Paragraph <P> tags (Common in US Regulations)
+        p_tags = soup.find_all("P")
+        if p_tags:
+            return "\n\n".join([clean_korean_text(p.get_text(strip=True)) for p in p_tags])
+
+        # 3. Fallback: Get all text
         return clean_korean_text(soup.get_text(separator="\n", strip=True))
+
+
+@LoaderFactory.register(".json")
+class JsonLoader(BaseLoader):
+    async def load(self, file_path: Path) -> list[IngestedDocument]:
+        import json
+        try:
+            async with aiofiles.open(file_path, "r", encoding="utf-8") as f:
+                content = await f.read()
+            
+            data = json.loads(content)
+            # JSON 구조에 따라 다르지만, 일반적인 구조(title, content 등)를 가정
+            # data가 list인 경우와 dict인 경우 처리
+            
+            docs = []
+            items = data if isinstance(data, list) else [data]
+            
+            for item in items:
+                # 필드명은 실제 JSON 구조에 맞춰 조정 필요 (여기서는 범용적으로 처리)
+                title = item.get("title", item.get("SUBJECT", file_path.stem))
+                content_text = item.get("content", item.get("text", item.get("CONTENT", "")))
+                std_id = item.get("id", item.get("standard_id", file_path.stem))
+                
+                # 내용이 없으면 건너뜀
+                if not content_text or len(str(content_text).strip()) < 10:
+                    continue
+                
+                # FMVSS 식별 (파일명이나 ID로)
+                region = RegulationRegion.FMVSS
+                if "571." in str(std_id) or "FMVSS" in str(std_id):
+                    region = RegulationRegion.FMVSS
+                
+                docs.append(
+                    IngestedDocument(
+                        content=str(content_text),
+                        metadata=DocumentMetadata(
+                            source_file=file_path.name,
+                            region=region,
+                            standard_id=str(std_id),
+                            title=str(title),
+                        ),
+                    )
+                )
+            
+            if not docs:
+                logger.warning(f"⚠️ JSON content too short or empty. Skipping: {file_path.name}")
+                
+            return docs
+
+        except Exception as e:
+            logger.error(f"Error processing JSON file ({file_path.name}): {e}", exc_info=True)
+            return []
 
 
 @LoaderFactory.register(".pdf")

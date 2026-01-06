@@ -1,170 +1,121 @@
-# 🚗 자동차 안전 법규 RAG 시스템 (Regulatory RAG System)
+# Global Auto Regulations AI (글로벌 자동차 규정 AI)
 
-복잡하고 방대한 자동차 안전 법규(FMVSS, KMVSS, ECE)를 효과적으로 탐색할 수 있는 **검색 증강 생성(Retrieval-Augmented Generation, RAG)** 시스템입니다. 최신 NLP 기술을 활용하여 법규 문서를 수집, 인덱싱하고, 사용자의 질의에 대해 정확한 문맥을 파악하여 전문적인 답변을 제공합니다.
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![LangChain](https://img.shields.io/badge/LangChain-v0.1-green.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-v1.32-red.svg)
+![Gemini](https://img.shields.io/badge/Google-Gemini_2.0-orange.svg)
+
+## 📌 프로젝트 개요 (Project Overview)
+
+**Global Auto Regulations AI**는 전 세계 자동차 안전 규정(FMVSS, ECE, KMVSS)을 통합하여 검색, 비교, 분석할 수 있는 **RAG(Retrieval-Augmented Generation)** 기반의 지능형 AI 시스템입니다.
+
+방대하고 복잡한 법규 문서를 전문가 수준으로 이해하고, 사용자의 자연어 질문에 대해 **정확한 근거(출처)**를 바탕으로 답변을 제공합니다. 특히 **다국어(한국어/영어) 환경**에서의 검색 정확도와 답변 신뢰성을 최우선으로 설계되었습니다.
 
 ---
 
-## 📖 개요
+## 🌟 핵심 기능 및 차별점 (Key Features)
 
-자동차 안전 법규는 기술적 밀도가 높고 상호 참조가 많아 이해하기 어렵습니다. 본 시스템은 이러한 문제를 해결하기 위해 개발되었습니다:
-1.  **수집 (Ingestion)**: XML 및 PDF 형식의 원문 법규 데이터를 수집합니다.
-2.  **인덱싱 (Indexing)**: 의미론적 청킹(Semantic Chunking)과 메타데이터 강화(Enrichment)를 통해 벡터 DB에 저장합니다.
-3.  **검색 (Retrieval)**: 하이브리드 검색(키워드 + 의미 기반)을 통해 가장 관련성 높은 조항을 찾습니다.
-4.  **생성 (Generation)**: 검색된 근거 자료를 바탕으로 LLM(Google Gemini)이 정확하고 신뢰할 수 있는 답변을 생성합니다.
+### 1. 🌍 다국어 규정 통합 검색 및 비교
+- **미국(FMVSS)**, **유럽(ECE)**, **한국(KMVSS)** 규정을 하나의 인터페이스에서 통합 검색합니다.
+- **"한국과 유럽의 보행자 머리 상해 기준 비교해줘"**와 같은 복합 질문에 대해, 각국의 관련 규정을 찾아 표 형태로 비교 분석합니다.
 
-## 🏗️ 시스템 아키텍처 및 데이터 흐름 (Node Flow)
+### 2. 🧠 언어별 특화 검색 알고리즘 (Language-Specific Retrieval)
+- **문제점:** 일반적인 Reranker 모델은 영어 데이터에는 강하지만 한국어 데이터 처리 시 점수 왜곡이 발생하여 관련 문서를 탈락시키는 문제가 있었습니다.
+- **해결책 (Dual Strategy):**
+    - **영어 문서 (FMVSS/ECE):** `FlashRank` (ms-marco)를 사용하여 정밀하게 재순위화(Reranking).
+    - **한국어 문서 (KMVSS):** 검색 엔진(BM25+Vector)의 원본 순위를 신뢰하여 유지.
+    - **교차 병합 (Interleaving):** 두 결과를 1:1 비율로 섞어 상위권에 다국어 문서가 균형 있게 배치되도록 보장.
 
-본 프로젝트의 데이터 처리 및 질의응답 흐름은 다음과 같습니다.
+### 3. 🔍 정밀한 근거 확보 (Deep Retrieval)
+- **KMVSS 별표/시험방법 타겟팅:** 한국어 질문 시 자동으로 `"충격시험방법"`, `"별표"` 등의 키워드를 쿼리에 추가하여, 단순 조항뿐만 아니라 구체적인 **기술적 세부 기준(Annex)**까지 찾아냅니다.
+- **하이브리드 검색 (Hybrid Search):** `BM25`(키워드 매칭)와 `Vector Search`(의미 매칭)를 결합하여 정확한 규정 번호와 문맥적 의미를 모두 포착합니다.
 
-```mermaid
-graph TD
-    %% 스타일 정의
-    classDef source fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef process fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
-    classDef db fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef ai fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+### 4. 🛡️ 답변의 신뢰성 및 투명성 (Reliability)
+- **출처 표기 강제:** 모든 답변 문장에 `[Source: ID]` 형태의 인용구를 부착하여 할루시네이션을 방지합니다.
+- **문서 적합성 평가 (Grading):** 검색된 문서가 질문과 관련이 있는지 LLM이 2차 검증(Grading)을 수행하고, 부적합한 문서는 답변 생성에서 배제합니다.
+- **UI 시각화:** 답변에 사용된 문서를 **국가별 탭**과 **카드 UI**로 깔끔하게 정리하여 사용자가 원문을 즉시 대조할 수 있습니다.
 
-    subgraph Data_Sources [데이터 원본]
-        A[FMVSS (미국, XML)]:::source
-        B[KMVSS (한국, XML)]:::source
-        C[ECE (유럽/UN, PDF)]:::source
-    end
+---
 
-    subgraph Ingestion_Pipeline [데이터 수집 파이프라인]
-        Loader[Data Loader<br/>(파일 파싱)]:::process
-        Splitter[Semantic Chunker<br/>(의미 단위 분할)]:::process
-        Enrich[Metadata Enrichment<br/>(문맥/제목 주입)]:::process
-        Embed[Embedding Model<br/>(HuggingFace)]:::ai
-        VectorDB[(Vector Store<br/>ChromaDB)]:::db
-    end
+## 🏗️ 시스템 아키텍처 (Architecture)
 
-    subgraph RAG_Engine [RAG 엔진 (질의응답)]
-        User[사용자 질문]:::source
-        QueryTrans[Query Transformation<br/>(번역 및 확장)]:::process
-        Retriever{Hybrid Retriever<br/>(BM25 + Vector)}:::process
-        Reranker[FlashRank Reranker<br/>(재순위화)]:::ai
-        Generator[LLM Generator<br/>(Google Gemini)]:::ai
-        Answer[최종 답변]:::process
-    end
+이 프로젝트는 **LangGraph**를 활용하여 유연하고 확장 가능한 워크플로우를 구현했습니다.
 
-    %% 연결선 (데이터 흐름)
-    A & B & C --> Loader
-    Loader --> Splitter
-    Splitter --> Enrich
-    Enrich --> Embed
-    Embed --> VectorDB
+### Workflow Diagram
+`질문 입력` -> `질의 변환` -> `검색(BM25+Vector)` -> `재순위화(Ko/En 분리)` -> `적합성 평가` -> `답변 생성`
 
-    User --> QueryTrans
-    QueryTrans --> Retriever
-    VectorDB <--> Retriever
-    Retriever -->|후보 문서 추출| Reranker
-    Reranker -->|상위 K개 문서| Generator
-    Generator --> Answer
-```
+1.  **Input Parsing**: PDF/XML 형태의 규정 문서를 파싱하고 의미 단위로 청킹(Chunking)합니다.
+2.  **Indexing**: `Multilingual MiniLM` 모델로 임베딩하여 ChromaDB에 저장하고, BM25 인덱스를 생성합니다.
+3.  **Graph Execution**:
+    *   **Transform Query**: 사용자 질문을 분석하여 한국어(상세 검색용)와 영어(번역 검색용) 쿼리를 생성합니다.
+    *   **Retrieve**: 다국어 쿼리로 병렬 검색을 수행합니다.
+    *   **Rerank**: 언어별 특성에 맞는 전략으로 문서를 정렬합니다.
+    *   **Grade**: LLM이 문서의 유용성을 평가합니다.
+    *   **Generate**: `Gemini 2.0 Flash` 모델이 최종 답변을 작성합니다.
 
-## ✨ 주요 기능
+---
 
--   **멀티 소스 수집**: FMVSS(미국), KMVSS(한국), ECE(유럽) 등 다양한 규격의 문서를 통합 처리합니다.
--   **하이브리드 검색 (Hybrid Search)**: **BM25(키워드 매칭)**와 **Vector Search(의미적 유사도)**를 결합하여 검색 정확도를 극대화했습니다.
--   **고급 재순위화 (Reranking)**: **FlashRank(Cross-Encoder)**를 사용하여 1차 검색된 문서들의 연관성을 다시 정밀하게 평가합니다.
--   **메타데이터 강화**: 텍스트 분할 시 문맥이 손실되지 않도록, 각 청크에 '규정 ID', '제목' 등의 정보를 자동으로 주입합니다.
--   **증분 업데이트**: 파일 해시(SHA256)를 추적하여 변경된 법규 파일만 지능적으로 재처리합니다.
--   **출처 기반 답변**: LLM이 답변 생성 시 반드시 근거가 되는 규정 조항(예: `[Source: FMVSS 108 S7.3]`)을 인용하도록 설계되었습니다.
+## 💻 기술 스택 (Tech Stack)
 
-## 🛠️ 기술 스택 (Tech Stack)
+| 구분 | 기술 / 라이브러리 | 용도 |
+| :--- | :--- | :--- |
+| **LLM** | **Google Gemini 2.0 Flash** | 질의 분석, 문서 평가, 답변 생성 |
+| **Framework** | **LangChain**, **LangGraph** | 애플리케이션 로직 및 워크플로우 제어 |
+| **Vector DB** | **ChromaDB** | 문서 임베딩 저장 및 시맨틱 검색 |
+| **Search** | **BM25**, **FlashRank** | 키워드 검색 및 검색 결과 재순위화 |
+| **Embedding** | **paraphrase-multilingual-MiniLM-L12-v2** | 다국어 텍스트 벡터 변환 |
+| **UI** | **Streamlit** | 대화형 웹 인터페이스 제공 |
+| **Data Parsing** | **LXML**, **PDFPlumber** | XML 및 PDF 문서 텍스트 추출 |
 
--   **언어**: Python 3.10+
--   **LLM**: Google Gemini 2.5 (via `langchain-google-genai`)
--   **프레임워크**: LangChain
--   **벡터 저장소**: ChromaDB (Local)
--   **임베딩**: HuggingFace (`sentence-transformers`)
--   **재순위화**: FlashRank
--   **UI**: Streamlit
--   **크롤링**: Selenium & BeautifulSoup
+---
 
-## 🚀 설치 및 실행 방법
+## 🚀 설치 및 실행 (Installation & Usage)
 
-### 사전 요구사항
--   Python 3.10 이상
--   Git
--   Google Cloud API Key (Gemini 사용 목적)
-
-### 설치 단계
-
-1.  **리포지토리 복제 (Clone)**
-    ```bash
-    git clone https://github.com/yangduhi/reg_RAG.git
-    cd reg_RAG
-    ```
-
-2.  **가상환경 생성 및 활성화**
-    ```bash
-    # Windows
-    python -m venv venv
-    .\venv\Scripts\activate
-
-    # Mac/Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3.  **의존성 패키지 설치**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **환경 설정 (.env)**
-    프로젝트 루트 경로에 `.env` 파일을 생성하고 아래 내용을 입력하세요.
-    ```ini
-    GOOGLE_API_KEY=your_google_api_key_here
-    # 선택 사항 (기본값 사용 시 생략 가능)
-    LLM_MODEL_NAME=gemini-2.5-flash
-    EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-    ```
-
-## 💻 사용법 (Usage)
-
-### 1. 데이터 수집 및 DB 구축
-제공된 법규 데이터(XML, PDF)를 벡터 DB에 적재해야 합니다. 파이프라인은 자동으로 변경된 파일만 처리합니다.
-
+### 1. 환경 설정
 ```bash
-python -m src.ingestion.pipeline
+# 1. 저장소 클론
+git clone [repository_url]
+cd FMVSS
+
+# 2. 가상환경 생성 및 활성화
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
+
+# 3. 패키지 설치
+pip install -r requirements.txt
 ```
 
-### 2. 애플리케이션 실행
-Streamlit 웹 인터페이스를 실행하여 RAG 시스템과 대화합니다.
-
-## 📂 프로젝트 구조
-
-```
-reg_RAG/
-├── config/              # 설정 파일 디렉토리
-├── data/                # 원본 및 처리된 데이터 (Git 제외됨)
-├── scripts/             # 유틸리티 스크립트
-│   └── check_vector_db.py # DB 인덱싱 상태 확인
-├── src/                 # 소스 코드
-│   ├── core/            # 핵심 설정 및 로깅
-│   ├── ingestion/       # 데이터 수집 파이프라인
-│   │   ├── loaders.py   # 파일 파서 (XML, PDF)
-│   │   └── pipeline.py  # 수집 로직 (Loader -> Splitter -> DB)
-│   ├── rag/             # 검색 및 생성 로직
-│   │   ├── engine.py    # RAG 엔진 파사드 (Main Logic)
-│   │   └── vectorstore.py
-│   └── interface/       # Streamlit UI 코드
-├── .gitignore           # Git 제외 규칙
-├── requirements.txt     # Python 라이브러리 목록
-└── README.md            # 프로젝트 문서
+### 2. API 키 설정
+`.env` 파일을 생성하고 Google API 키를 입력하세요.
+```env
+GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-## 🤝 기여 (Contribution)
+### 3. 데이터 준비 (최초 1회)
+최초 실행 시 데이터 수집 및 DB 구축 과정이 필요할 수 있습니다. UI 사이드바의 **[전체 재구축]** 버튼을 통해 실행할 수 있습니다.
 
-이 프로젝트에 기여하고 싶다면 다음 절차를 따라주세요:
-1.  Fork를 생성합니다.
-2.  기능 브랜치를 만듭니다 (`git checkout -b feature/NewFeature`).
-3.  변경 사항을 커밋합니다 (`git commit -m 'Add NewFeature'`).
-4.  브랜치에 푸시합니다 (`git push origin feature/NewFeature`).
-5.  Pull Request를 생성합니다.
+### 4. 앱 실행
+```bash
+streamlit run src/interface/streamlit_app.py
+```
 
-## 📄 라이선스 (License)
+---
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+## 🛠️ 문제 해결 (Troubleshooting)
+
+**Q. 검색 결과에 한국 규정의 상세 수치가 안 나와요.**
+*   A. 사이드바의 **'검색 범위 설정'**에서 'KR'이 체크되어 있는지 확인하세요. 또한 **'검색 정확도'**를 낮추거나(0.3), 질문에 "별표" 또는 "세부기준"이라는 단어를 포함하면 더 잘 찾아냅니다. (시스템이 자동으로 "충격시험방법" 등을 추가하긴 합니다.)
+
+**Q. 답변 생성이 너무 느려요.**
+*   A. 초기 실행 시 모델 로딩(BM25 인덱싱, Reranker 로드)에 시간이 소요될 수 있습니다. 이후에는 캐싱되어 빨라집니다. Gemini API 응답 속도에 따라 차이가 있을 수 있습니다.
+
+**Q. 'StreamlitDuplicateElementKey' 에러가 떠요.**
+*   A. UI 렌더링 시 발생하는 버그로, 현재 코드에서는 `uuid`를 적용하여 해결되었습니다. 앱을 새로고침(F5) 해주세요.
+
+---
+
+## 📝 라이선스 (License)
+This project is for educational and research purposes. (MIT License)

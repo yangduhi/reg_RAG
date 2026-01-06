@@ -5,6 +5,7 @@ __pycache__/
 *.pyd
 venv/
 env/
+.pytest_cache/
 
 # Environment Variables & Secrets (CRITICAL)
 .env
@@ -28,6 +29,12 @@ selenium_user_data/
 
 # Archives & Backups
 _archive/
+
+# Generated Visualizations
+*.html
+*.png
+*.svg
+architecture_diagram.png
 
 # Crawlers (Data already collected)
 scripts/ece_crawler.py

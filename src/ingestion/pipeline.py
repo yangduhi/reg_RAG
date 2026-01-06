@@ -5,8 +5,7 @@ from pathlib import Path
 from typing import List, Tuple, Optional, Dict
 
 from langchain_core.documents import Document
-from langchain_experimental.text_splitter import SemanticChunker
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from rich.traceback import install
 
 from src.core.config import settings
@@ -27,7 +26,7 @@ class IngestionPipeline:
     1. 구성된 디렉토리에서 대상 규정 파일(XML, PDF) 식별.
     2. 증분 업데이트(Incremental Update)를 지원하기 위해 파일 변경 사항(SHA256 해시) 추적.
     3. 전용 로더(Loader)를 사용한 파일 로딩 및 파싱.
-    4. 텍스트를 의미론적 청크(Semantic Chunk)로 분할.
+    4. 텍스트를 구조적 청크(Recursive Character Chunk)로 분할.
     5. 청크에 문맥 메타데이터(규정 ID, 제목 등) 주입.
     6. 벡터 데이터베이스에 청크 인덱싱.
     7. 수집 상태 데이터베이스 업데이트.
@@ -35,26 +34,26 @@ class IngestionPipeline:
     Attributes:
         vstore (VectorStoreManager): 벡터 데이터베이스 인터페이스.
         db_state_manager (DatabaseStateManager): 파일 처리 상태 관리자.
-        splitter (SemanticChunker): 임베딩 모델 기반의 의미론적 텍스트 분할기.
+        splitter (RecursiveCharacterTextSplitter): 텍스트 구조 기반의 분할기.
     """
 
     def __init__(self) -> None:
         """
         IngestionPipeline을 초기화합니다.
         
-        데이터베이스 상태 관리자를 설정하고, 구성된 임베딩 모델을 사용하여
-        의미론적 청크 분할기를 초기화합니다.
+        데이터베이스 상태 관리자를 설정하고, 텍스트 구조를 보존하는
+        RecursiveCharacterTextSplitter를 초기화합니다.
         """
         self.vstore: Optional[VectorStoreManager] = None
         self.db_state_manager = DatabaseStateManager()
 
-        logger.info("🛠️ SemanticChunker(의미론적 분할기) 초기화 중...")
-        embedding_fn = HuggingFaceEmbeddings(
-            model_name=settings.EMBEDDING_MODEL,
-            model_kwargs={"device": settings.DEVICE},
-            encode_kwargs={"normalize_embeddings": True},
+        logger.info(f"🛠️ RecursiveCharacterTextSplitter 초기화 (Size: {settings.CHUNK_SIZE}, Overlap: {settings.CHUNK_OVERLAP})")
+        self.splitter = RecursiveCharacterTextSplitter(
+            chunk_size=settings.CHUNK_SIZE,
+            chunk_overlap=settings.CHUNK_OVERLAP,
+            separators=["\n\n", "\n", ". ", " ", ""], # 법규 구조 보존을 위한 구분자 순서
+            length_function=len,
         )
-        self.splitter = SemanticChunker(embedding_fn)
 
     def _calculate_hash(self, file_path: Path) -> str:
         """
@@ -99,16 +98,23 @@ class IngestionPipeline:
         # 벡터 저장소 초기화 (여기서 연결 수립)
         self.vstore = VectorStoreManager()
 
-        # 1. 대상 파일 스캔
+        # 1. Scan for Target Files
         target_files: List[Path] = []
-        if settings.RAW_XML_FMVSS_PATH.exists():
-            target_files.extend(settings.RAW_XML_FMVSS_PATH.glob("*.xml"))
+        
+        # [FMVSS]: Use pre-processed JSON files (Data quality is better than raw XML)
+        json_dir = settings.DATA_DIR / "processed_json_for_rag"
+        if json_dir.exists():
+            target_files.extend(json_dir.glob("*.json"))
+
+        # [KMVSS]: Use raw XML files
         if settings.RAW_XML_KMVSS_PATH.exists():
             target_files.extend(settings.RAW_XML_KMVSS_PATH.glob("*.xml"))
+            
+        # [ECE]: Use PDF files
         if settings.RAW_PDF_ECE_PATH.exists():
             target_files.extend(settings.RAW_PDF_ECE_PATH.glob("*.pdf"))
         
-        # 아카이브 파일 제외 및 결정적 처리 순서를 위한 정렬
+        # Filter out archive files and sort for deterministic processing order
         target_files = sorted([f for f in target_files if "archive" not in str(f)])
 
         if not target_files:
