@@ -67,7 +67,7 @@ graph TD
     subgraph QueryProc ["2. 질의 분석 및 확장 (Query Processing)"]
         style QueryProc fill:#e8f5e9,stroke:#a5d6a7,color:#2e7d32
         UserQuery(("👤 사용자 질문")):::white
-        Transform["🔄 질의 변환<br>(LLM 분석)"]:::green
+        Transform["🔄 질의 변환<br>(LLM 분석 - Flash)"]:::green
         MultiQuery["📑 멀티 쿼리 생성<br>(KR/EN/Keyword)"]:::white
 
         UserQuery --> Transform
@@ -87,7 +87,7 @@ graph TD
         end
 
         Interleave["🔀 교차 병합<br>(1:1 비율)"]:::darkpurple
-        Grade["⚖️ 적합성 평가<br>(LLM 검증)"]:::darkpurple
+        Grade["⚖️ 적합성 평가<br>(LLM 검증 - Flash)"]:::darkpurple
 
         MultiQuery --> HybridSearch
         VectorDB -.-> HybridSearch
@@ -103,7 +103,7 @@ graph TD
     subgraph Generation ["4. 답변 생성 및 검증 (Generation)"]
         style Generation fill:#e0f7fa,stroke:#80deea,color:#00838f
         Context["📄 최적 문맥 구성"]:::white
-        Generator["🤖 답변 생성<br>(Gemini 2.0 Flash)"]:::cyan
+        Generator["🤖 답변 생성<br>(Gemini 2.5 Pro)"]:::cyan
         Citations["📌 출처 표기 강제"]:::cyan
         FinalAnswer[("💬 최종 답변")]:::darkcyan
 
