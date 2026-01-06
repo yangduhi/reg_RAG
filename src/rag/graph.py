@@ -123,6 +123,7 @@ class RAGGraph:
             
             **Instructions:**
             1. **Analyze:** specific topics (e.g., "head injury", "braking", "seatbelt").
+               - *Mapping Hint:* "Roof Crush" -> "FMVSS 216", "KMVSS 92" (천정구조).
             2. **Translate & Expand (Conditional):**
                - **Query 1 (Korean):** Optimized for KMVSS. Use specific Korean technical terms. **MANDATORY: Append "충격시험방법" (Test Procedure) and "HIC" (if head injury).** (Only if KMVSS is targeted)
                - **Query 2 (English):** Optimized for ECE/FMVSS. **TRANSLATE** technical terms. **CRITICAL: If "US/America" is mentioned, include "FMVSS". If "Europe" is mentioned, include "ECE".** (Only if ECE/FMVSS are targeted)

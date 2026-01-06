@@ -1,6 +1,9 @@
 # check_db.py
-from src.rag.vectorstore import VectorStoreManager
 import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from src.rag.vectorstore import VectorStoreManager
 
 def check(query=None):
     print("🔍 데이터베이스 검사 중...")

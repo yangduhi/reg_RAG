@@ -187,7 +187,22 @@ class JsonLoader(BaseLoader):
                 # 필드명은 실제 JSON 구조에 맞춰 조정 필요 (여기서는 범용적으로 처리)
                 title = item.get("title", item.get("SUBJECT", file_path.stem))
                 content_text = item.get("content", item.get("text", item.get("CONTENT", "")))
-                std_id = item.get("id", item.get("standard_id", file_path.stem))
+                std_id = item.get("id", item.get("standard_id", ""))
+                
+                # ID가 유효하지 않으면 파일명에서 추출
+                if not std_id or str(std_id).lower() in ["unknown", "fmvss_unknown", "nan", "none"]:
+                    # 파일명 예: 571.216.json -> 571.216
+                    # 파일명 예: 571.216.xml -> 571.216
+                    std_id = file_path.stem
+
+                # FMVSS ID 포맷팅 (예: 571.216 -> FMVSS 216)
+                if "571." in str(std_id):
+                    # 숫자만 추출 (216)
+                    match = re.search(r"571\.(\w+)", str(std_id))
+                    if match:
+                        std_id = f"FMVSS {match.group(1)}"
+                    else:
+                        std_id = str(std_id)
                 
                 # 내용이 없으면 건너뜀
                 if not content_text or len(str(content_text).strip()) < 10:
