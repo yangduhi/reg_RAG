@@ -57,15 +57,42 @@
 
 ## 💻 기술 스택 (Tech Stack)
 
-| 구분 | 기술 / 라이브러리 | 용도 |
-| :--- | :--- | :--- |
-| **LLM** | **Google Gemini 2.0 Flash** | 질의 분석, 문서 평가, 답변 생성 |
-| **Framework** | **LangChain**, **LangGraph** | 애플리케이션 로직 및 워크플로우 제어 |
-| **Vector DB** | **ChromaDB** | 문서 임베딩 저장 및 시맨틱 검색 |
-| **Search** | **BM25**, **FlashRank** | 키워드 검색 및 검색 결과 재순위화 |
-| **Embedding** | **paraphrase-multilingual-MiniLM-L12-v2** | 다국어 텍스트 벡터 변환 |
-| **UI** | **Streamlit** | 대화형 웹 인터페이스 제공 |
-| **Data Parsing** | **LXML**, **PDFPlumber** | XML 및 PDF 문서 텍스트 추출 |
+### 1. Large Language Model (LLM)
+*   **Model:** **Google Gemini 2.0 Flash**
+*   **사용 목적:** 사용자 질의 의도 분석, 검색된 문서의 적합성 평가(Grading), 최종 답변 생성.
+*   **선정 의의:** 긴 문맥(Long Context) 처리에 강점이 있어 방대한 법규 문서를 한 번에 참조하기 유리하며, 추론 속도가 빨라 실시간 검색 서비스에 적합합니다.
+*   **현재 파라미터:**
+    *   `temperature = 0.0`: 법률/규정 데이터의 특성상 창의성보다는 **사실성(Factuality)**과 **일관성**이 중요하므로 무작위성을 제거했습니다.
+
+### 2. Orchestration Framework
+*   **Library:** **LangChain**, **LangGraph**
+*   **사용 목적:** RAG 파이프라인의 전체 워크플로우(검색 -> 재순위화 -> 평가 -> 생성) 제어 및 상태 관리.
+*   **기대 효과:**
+    *   **LangGraph** 도입을 통해 단순한 선형 체인이 아닌, **순환형(Cyclic) 프로세스**를 구현했습니다. (예: 검색 결과가 부적합하면 질의를 수정하여 재검색)
+    *   각 노드(Node) 간의 상태(State)를 공유하여 복잡한 로직을 모듈화했습니다.
+
+### 3. Search & Retrieval (RAG Core)
+*   **Hybrid Search:** **BM25 (Keyword)** + **Vector Search (Semantic)**
+    *   **의의:** 정확한 조항 번호 매칭(BM25)과 문맥적 의미 검색(Vector)의 장점을 결합하여 재현율(Recall)을 극대화했습니다.
+    *   **파라미터:** `RETRIEVER_K = 25` (기본 4~5개보다 훨씬 많은 문서를 후보로 추출하여, 놓치기 쉬운 별표/부록(Annex) 데이터까지 확보)
+*   **Reranking:** **FlashRank (ms-marco-MiniLM-L-12-v2)**
+    *   **사용 목적:** 1차 검색된 다량의 문서(25개)를 질문와의 관련성 순으로 정밀 재정렬.
+    *   **기대 효과:** 한국어와 영어 문서가 섞여 있을 때, 단순히 점수가 높은 순이 아니라 실제 질의와의 연관성을 기준으로 상위 문서를 선별하여 정확도 향상.
+
+### 4. Vector Database & Embedding
+*   **Database:** **ChromaDB**
+    *   **특징:** 로컬 파일 기반으로 가볍게 구동되면서도 빠른 벡터 검색 속도 제공.
+*   **Embedding Model:** **sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2**
+    *   **선정 이유:** 한국어와 영어를 동시에 지원하는 경량 모델 중 성능이 우수하여, 다국어 규정 비교 검색에 최적화됨.
+    *   **Chunking 설정:**
+        *   `CHUNK_SIZE = 2000`: 규정 문서 내의 긴 표나 조항 전체를 하나의 맥락으로 유지하기 위해 크게 설정.
+        *   `CHUNK_OVERLAP = 400`: 문맥이 잘리는 것을 방지하기 위한 중복 구간.
+
+### 5. Data Processing & UI
+*   **Parser:** **LXML** (XML), **PDFPlumber** (PDF)
+    *   구조화된 법규 데이터(XML)와 비정형 데이터(PDF)를 텍스트로 변환 및 정제.
+*   **Frontend:** **Streamlit**
+    *   Python만으로 빠르게 대화형 웹 인터페이스를 구축하여 프로토타이핑 및 배포 효율성 증대.
 
 ---
 
