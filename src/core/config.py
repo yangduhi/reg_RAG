@@ -77,7 +77,8 @@ class AppSettings(BaseSettings):
     GOOGLE_API_KEY: str = Field(description="Google Gemini API Key")
     
     # 사용할 LLM 모델명 (비용 및 성능을 고려하여 2.0 Flash/Pro 등 선택)
-    LLM_MODEL_NAME: str = "gemini-2.0-flash" 
+    LLM_MODEL_NAME: str = "gemini-2.0-flash"  # 고속 처리용 (질의 변환, 평가)
+    LLM_MODEL_SMART: str = "gemini-2.5-pro"   # 고성능 추론용 (최종 답변 생성)
     LLM_TEMPERATURE: float = 0.0 # 0.0으로 설정하여 답변의 일관성 및 사실성 확보 (창의성 억제)
 
     # [임베딩 및 재순위화 모델]

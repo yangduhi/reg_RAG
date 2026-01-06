@@ -67,9 +67,16 @@ class RAGEngine:
         - 비동기적으로 검색기(Retriever) 초기화 태스크를 백그라운드에서 시작합니다. (UI 로딩 지연 방지)
         """
         # 1. LLM 초기화 (Google Gemini API 사용)
-        # settings.LLM_MODEL_NAME (예: gemini-2.0-flash) 모델 사용
+        # settings.LLM_MODEL_NAME (예: gemini-2.0-flash) 모델 사용 -> 일반/고속 작업용
         self.llm = ChatGoogleGenerativeAI(
             model=settings.LLM_MODEL_NAME,
+            google_api_key=settings.GOOGLE_API_KEY,
+            temperature=settings.LLM_TEMPERATURE,
+        )
+        
+        # settings.LLM_MODEL_SMART (예: gemini-2.5-pro) 모델 사용 -> 고성능 답변 생성용
+        self.llm_smart = ChatGoogleGenerativeAI(
+            model=settings.LLM_MODEL_SMART,
             google_api_key=settings.GOOGLE_API_KEY,
             temperature=settings.LLM_TEMPERATURE,
         )

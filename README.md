@@ -138,11 +138,13 @@ graph TD
 ## 💻 기술 스택 (Tech Stack)
 
 ### 1. Large Language Model (LLM)
-*   **Model:** **Google Gemini 2.0 Flash**
-*   **사용 목적:** 사용자 질의 의도 분석, 검색된 문서의 적합성 평가(Grading), 최종 답변 생성.
-*   **선정 의의:** 긴 문맥(Long Context) 처리에 강점이 있어 방대한 법규 문서를 한 번에 참조하기 유리하며, 추론 속도가 빨라 실시간 검색 서비스에 적합합니다.
+*   **Hybrid Strategy:**
+    *   **Gemini 2.0 Flash:** High-speed tasks (Query Transformation, Relevance Grading)
+    *   **Gemini 2.5 Pro:** High-reasoning tasks (Final Answer Generation)
+*   **사용 목적:** 사용자 질의 의도 분석, 문서 평가(Fast), 최종 답변 생성(Smart).
+*   **선정 의의:** 2.0 Flash의 속도와 2.5 Pro의 추론 능력을 결합하여, 실시간성을 보장하면서도 복잡한 규정 비교 분석의 정확도를 극대화했습니다.
 *   **현재 파라미터:**
-    *   `temperature = 0.0`: 법률/규정 데이터의 특성상 창의성보다는 **사실성(Factuality)**과 **일관성**이 중요하므로 무작위성을 제거했습니다.
+    *   `temperature = 0.0`: Factuality(사실성) 확보.
 
 ### 2. Orchestration Framework
 *   **Library:** **LangChain**, **LangGraph**

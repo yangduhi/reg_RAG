@@ -420,7 +420,8 @@ class RAGGraph:
         """
         
         prompt = ChatPromptTemplate.from_template(template)
-        chain = prompt | self.engine.llm | StrOutputParser()
+        # 답변 생성 단계에서는 고성능 모델(gemini-2.5-pro) 사용
+        chain = prompt | self.engine.llm_smart | StrOutputParser()
         
         response = await chain.ainvoke({
             "history": history_str, 
