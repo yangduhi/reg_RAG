@@ -53,6 +53,26 @@
     *   **Grade**: LLM이 문서의 유용성을 평가합니다.
     *   **Generate**: `Gemini 2.0 Flash` 모델이 최종 답변을 작성합니다.
 
+### Simplified Web Search Workflow
+(요청하신 웹 검색 기반의 단순화된 워크플로우 시각화)
+
+```mermaid
+graph LR
+    A[Query] --> B[Web Search]
+    B --> C{Results Found?}
+    C -- Yes --> D[Document Rerank]
+    C -- No --> B
+    D --> E[LLM Generation]
+    E --> F[Answer]
+    
+    style A fill:#E1F5FE,stroke:#0277BD
+    style B fill:#E1F5FE,stroke:#0277BD
+    style C fill:#FFF9C4,stroke:#FBC02D
+    style D fill:#E1F5FE,stroke:#0277BD
+    style E fill:#E1F5FE,stroke:#0277BD
+    style F fill:#E1F5FE,stroke:#0277BD
+```
+
 ---
 
 ## 💻 기술 스택 (Tech Stack)
