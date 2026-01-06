@@ -44,6 +44,7 @@
 ### Workflow Diagram (System Architecture)
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#000000'}}}%%
 graph TD
     %% 1. 데이터 수집 및 가공 단계 (Data Ingestion)
     subgraph Ingestion ["1. 데이터 수집 및 가공 (Data Ingestion)"]
@@ -127,6 +128,9 @@ graph TD
     classDef darkpurple fill:#ba68c8,stroke:#8e24aa,color:#fff;
     classDef cyan fill:#b2ebf2,stroke:#4dd0e1,color:#000;
     classDef darkcyan fill:#00acc1,stroke:#00838f,color:#fff;
+
+    %% 화살표 스타일 강화 (Thicker & Darker Arrows)
+    linkStyle default stroke:#000,stroke-width:2px;
 ```
 
 ---
