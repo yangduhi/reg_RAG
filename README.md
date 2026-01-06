@@ -46,7 +46,7 @@
 ```mermaid
 graph TD
     %% 1. 데이터 수집 및 가공 단계 (Data Ingestion)
-    subgraph Ingestion [1. 데이터 수집 및 가공 (Data Ingestion)]
+    subgraph Ingestion ["1. 데이터 수집 및 가공 (Data Ingestion)"]
         style Ingestion fill:#e3f2fd,stroke:#90caf9,color:#1565c0
         RawData[("📂 원시 데이터<br>(PDF/XML)")]:::white
         Parsing["⚙️ 파싱 및 정제<br>(LXML/PDFPlumber)"]:::blue
@@ -63,7 +63,7 @@ graph TD
     end
 
     %% 2. 질의 처리 단계 (Query Processing)
-    subgraph QueryProc [2. 질의 분석 및 확장 (Query Processing)]
+    subgraph QueryProc ["2. 질의 분석 및 확장 (Query Processing)"]
         style QueryProc fill:#e8f5e9,stroke:#a5d6a7,color:#2e7d32
         UserQuery(("👤 사용자 질문")):::white
         Transform["🔄 질의 변환<br>(LLM 분석)"]:::green
@@ -74,12 +74,12 @@ graph TD
     end
 
     %% 3. 검색 및 순위화 단계 (Retrieval & Ranking)
-    subgraph Retrieval [3. 하이브리드 검색 및 재순위화 (Retrieval & Ranking)]
+    subgraph Retrieval ["3. 하이브리드 검색 및 재순위화 (Retrieval & Ranking)"]
         style Retrieval fill:#f3e5f5,stroke:#ce93d8,color:#6a1b9a
         HybridSearch["🔍 하이브리드 검색<br>(BM25 + Vector)"]:::purple
         Rerank_Split{"언어별 분기"}:::diamond
         
-        subgraph RerankLogic [이원화된 재순위화 로직 (Dual Strategy)]
+        subgraph RerankLogic ["이원화된 재순위화 로직 (Dual Strategy)"]
             style RerankLogic fill:#ffffff,stroke:#9575cd
             Rerank_En["🇺🇸 영어: FlashRank<br>(정밀도 향상)"]:::purple
             Rerank_Ko["🇰🇷 한국어: 순위 유지<br>(왜곡 방지)"]:::purple
@@ -99,7 +99,7 @@ graph TD
     end
 
     %% 4. 답변 생성 단계 (Generation)
-    subgraph Generation [4. 답변 생성 및 검증 (Generation)]
+    subgraph Generation ["4. 답변 생성 및 검증 (Generation)"]
         style Generation fill:#e0f7fa,stroke:#80deea,color:#00838f
         Context["📄 최적 문맥 구성"]:::white
         Generator["🤖 답변 생성<br>(Gemini 2.0 Flash)"]:::cyan
